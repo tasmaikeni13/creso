@@ -1,0 +1,14 @@
+formal/.lake/
+__pycache__/
+*.py[cod]
+.venv/
+.ruff_cache/
+.pytest_cache/
+.env
+.env.*
+data/
+checkpoints/
+runs/
+wandb/
+*.log
+.DS_Store
