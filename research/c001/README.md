@@ -27,12 +27,13 @@ Create a Python environment and install `requirements.txt`. Run the commands in
 and 20261022; seeds 42–44 are reserved. The manifest records the pre-final numerical
 source revision and hashes. Every peer may average the complete method data.
 
-Lossless raw NPZ replicas, directions and assessments are excluded from Git.
-Download the three assets named in `raw-storage.json`, verify their SHA-256 values
-and extract at the repository root. Then run `analyze.py`; it verifies all 192
-final files, replays every tuned method and checks independent readouts. The
-[dataset release](https://github.com/tasmaikeni13/creso/releases/tag/creso-phase01-02)
-is evidence transport for Phases 01–02, not an executed publication or training phase.
+Lossless raw NPZ replicas, directions and assessments are excluded from Git
+and retained locally. There is no public raw-data download. `raw-storage.json`
+records local archive paths and SHA-256 checksums. With access to those archives,
+verify the checksums and extract the three tar files at the repository root.
+Then run `analyze.py`; it verifies all 192 final files, replays every tuned method
+and checks independent readouts. The supplemental `source-muon-raw.npz` is also
+retained locally. A fresh source checkout alone cannot replay the raw study.
 
 Source primary documents are cached outside Git with hashes in source-manifest.json.
 Complete optimizer ports, numerical certification and TPU comparisons remain open.

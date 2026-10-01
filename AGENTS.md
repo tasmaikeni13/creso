@@ -6,9 +6,15 @@ active algorithm, `phases/README.md` for scope and gates, and
 
 ## Scope and research decisions
 
-- The authorized work is mechanism research, theory, Lean verification and
-  Phases 01–02. Phases 03–09 await their start instruction. Do not call a plan
-  an executed training study.
+- Phases 01–02 are complete for revision c001. Execute only the work requested
+  by the user. Phases 03–09 are reserved for the user and require an explicit
+  start instruction. Do not call a plan an executed training study.
+- The current contribution is a calibrated spectral decision with scoped matrix
+  guarantees. Its component mechanisms are established; breakthrough-level
+  novelty, a new optimization principle and training superiority are unproved.
+  Preserve this distinction in documentation and repository metadata.
+- Keep routine documentation and repository maintenance bounded. Do not reopen
+  completed literature searches or rerun studies for an administrative change.
 - Apply relevant repository skills under `skills/`: literature-frontier,
   mechanism-transfer, theory-research, ml-research and experimental-research.
   Load the references needed by the active task. Preserve the submodule pin
@@ -57,10 +63,21 @@ On a fresh checkout: `git submodule update --init --recursive`, then
   lint/format: `.venv/bin/python -m ruff check research/c001` and
   `.venv/bin/python -m ruff format --check research/c001`.
 - Python follows PEP8, meaningful numerical checks and focused comments. Keep
-  credentials, caches, raw NPZ data and checkpoints out of Git. Large evidence
-  belongs in durable storage with downloadable manifests and checksums.
+  credentials, caches, raw NPZ data and checkpoints out of Git. Preserve large
+  evidence locally with paths and checksums in `research/c001/raw-storage.json`.
+  State accurately whether raw data are publicly downloadable.
 - Planned hardware is TPU v4-32 (16 chips), with JAX/Pallas. CPU/CUDA times are
   not TPU times. No training launch command is implemented yet.
+
+## Repository delivery
+
+- Push requested source and documentation changes after reviewing the diff.
+  Keep the skills submodule and frozen scientific artifacts intact.
+- Keep GitHub Releases empty unless the user explicitly requests a release.
+  A request to push commits does not authorize a release, release tag or dataset
+  upload. Preserve local raw evidence when removing hosted assets.
+- Keep README links and storage manifests consistent with actual availability.
+  Repository descriptions must reflect the experimental scope and proved claims.
 
 ## Confirmation contract and done
 

@@ -1,8 +1,6 @@
 {
-  "provider": "GitHub release assets",
+  "provider": "Local files excluded from Git",
   "repository": "tasmaikeni13/creso",
-  "release_tag": "creso-phase01-02",
-  "release_id": 401074307,
   "assets": [
     {
       "name": "creso-c001-primary.tar",
@@ -10,10 +8,7 @@
       "sha256": "7f80c5f149e9ee240b988c3e23696a0f0a65fee56d21519884ff92f096954c9b",
       "npz_files": 80,
       "local_cache_path": ".source-cache/c001/creso-c001-primary.tar",
-      "asset_id": 603513793,
-      "api_url": "https://api.github.com/repos/tasmaikeni13/creso/releases/assets/603513793",
-      "download_url": "https://github.com/tasmaikeni13/creso/releases/download/untagged-e796318c44d18521f62b/creso-c001-primary.tar",
-      "server_digest_verified": true
+      "local_sha256_verified": true
     },
     {
       "name": "creso-c001-boundary.tar",
@@ -21,10 +16,7 @@
       "sha256": "d8bbeff9d55bfff382f8c2f5abe95ed952cec415688b1e46687662e5cce47e0c",
       "npz_files": 112,
       "local_cache_path": ".source-cache/c001/creso-c001-boundary.tar",
-      "asset_id": 603513796,
-      "api_url": "https://api.github.com/repos/tasmaikeni13/creso/releases/assets/603513796",
-      "download_url": "https://github.com/tasmaikeni13/creso/releases/download/untagged-e796318c44d18521f62b/creso-c001-boundary.tar",
-      "server_digest_verified": true
+      "local_sha256_verified": true
     },
     {
       "name": "creso-c001-development.tar",
@@ -32,22 +24,18 @@
       "sha256": "a87db6f6134e52b1a506b5cb510f302b78a56445530726355bc2cd1f3219e3ba",
       "npz_files": 25,
       "local_cache_path": ".source-cache/c001/creso-c001-development.tar",
-      "asset_id": 603513794,
-      "api_url": "https://api.github.com/repos/tasmaikeni13/creso/releases/assets/603513794",
-      "download_url": "https://github.com/tasmaikeni13/creso/releases/download/untagged-e796318c44d18521f62b/creso-c001-development.tar",
-      "server_digest_verified": true
+      "local_sha256_verified": true
     },
     {
       "name": "source-muon-raw.npz",
       "bytes": 1005918,
       "sha256": "bf95d4b8e774a7ea6187ae4b37437d0916fd5cab8fbfe05dff8ad2366cb78080",
       "npz_files": 1,
-      "asset_id": 603525560,
-      "api_url": "https://api.github.com/repos/tasmaikeni13/creso/releases/assets/603525560",
-      "download_url": "https://github.com/tasmaikeni13/creso/releases/download/untagged-e796318c44d18521f62b/source-muon-raw.npz",
-      "server_digest_verified": true,
-      "scope": "Exploratory unrepaired NS5 diagnostic; main protocol unchanged."
+      "scope": "Exploratory unrepaired NS5 diagnostic; main protocol unchanged.",
+      "local_cache_path": "research/c001/source-muon-raw.npz",
+      "local_sha256_verified": true
     }
   ],
-  "status": "uploaded_server_sha256_verified"
+  "status": "local_only_sha256_verified",
+  "public_downloads": false
 }

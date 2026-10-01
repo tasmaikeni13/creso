@@ -15,5 +15,7 @@
   "extreme_novelty": "unestablished",
   "all_peer_training_superiority": "unestablished",
   "active_tree_name_scan": "passed",
-  "completed_at": "2026-10-01T15:20:02.850718+00:00"
+  "completed_at": "2026-10-01T15:20:02.850718+00:00",
+  "raw_storage_status": "local_only",
+  "raw_public_downloads": false
 }
