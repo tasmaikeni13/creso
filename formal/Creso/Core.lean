@@ -1,4 +1,4 @@
-import Rasp
+import Creso.Geometry
 
 /-! CRESO's exact finite spectral decision problem. The feasible operator is
 the actual rectangular matrix operator; no scalar replacement is used. -/
@@ -20,13 +20,38 @@ def gain (a q t : ℝ) : ℝ := a * t - q / 2 * t ^ 2
 def bestFraction (a q : ℝ) : ℝ :=
   if q = 0 then (if a ≤ 0 then 0 else 1) else max 0 (min 1 (a / q))
 
+def radialMatrix {m n : ℕ} (r : ℝ) (A : Creso.Mat m n) : Creso.Mat m n :=
+  if ‖Creso.asOperator m n A‖ = 0 then A
+  else (min 1 (r / ‖Creso.asOperator m n A‖)) • A
+
+theorem radialMatrix_feasible {m n : ℕ} {r : ℝ} (hr : 0 ≤ r) (A : Creso.Mat m n) :
+    radialMatrix r A ∈ Creso.spectralBall m n r := by
+  unfold radialMatrix
+  split_ifs with h
+  · rw [Creso.mem_spectralBall, h]
+    exact hr
+  · exact Creso.radial_feasibility hr (lt_of_le_of_ne (norm_nonneg _) (Ne.symm h)) A le_rfl
+
+def guardedLibrary {m n : ℕ} (r : ℝ) (A U C : Creso.Mat m n) : Fin 4 → Creso.Mat m n
+  | 0 => 0
+  | 1 => radialMatrix r A
+  | 2 => radialMatrix r U
+  | 3 => radialMatrix r C
+
+theorem guardedLibrary_feasible {m n : ℕ} {r : ℝ} (hr : 0 ≤ r)
+    (A U C : Creso.Mat m n) : ∀ i, guardedLibrary r A U C i ∈ Creso.spectralBall m n r := by
+  intro i
+  fin_cases i
+  · exact Creso.zero_mem_spectralBall m n hr
+  all_goals exact radialMatrix_feasible hr _
+
 theorem mix_zero (A B : H) : mix 0 A B = A := by simp [mix]
 theorem mix_one (A B : H) : mix 1 A B = B := by simp [mix]
 
-theorem mix_feasible {m n : ℕ} {r t : ℝ} {A B : Rasp.Mat m n}
-    (hA : A ∈ Rasp.spectralBall m n r) (hB : B ∈ Rasp.spectralBall m n r)
-    (ht : t ∈ Set.Icc (0 : ℝ) 1) : mix t A B ∈ Rasp.spectralBall m n r :=
-  (Rasp.spectralBall_convex m n r) hA hB (sub_nonneg.mpr ht.2) ht.1 (by ring)
+theorem mix_feasible {m n : ℕ} {r t : ℝ} {A B : Creso.Mat m n}
+    (hA : A ∈ Creso.spectralBall m n r) (hB : B ∈ Creso.spectralBall m n r)
+    (ht : t ∈ Set.Icc (0 : ℝ) 1) : mix t A B ∈ Creso.spectralBall m n r :=
+  (Creso.spectralBall_convex m n r) hA hB (sub_nonneg.mpr ht.2) ht.1 (by ring)
 
 theorem progress_mix (μ t : ℝ) (g A B : H) :
     progress μ g (mix t A B) = (1 - t) * progress μ g A +
@@ -133,9 +158,9 @@ theorem exists_finite_best {ι : Type*} [Fintype ι] [Nonempty ι]
   exact ⟨i, fun j => hi j (Finset.mem_univ j)⟩
 
 theorem exists_matrix_decision {m n k : ℕ} [NeZero k] {r μ : ℝ}
-    (hμ : 0 ≤ μ) (D : Fin k → Rasp.Mat m n) (v : Rasp.Mat m n) (b : Fin k → ℝ)
-    (hf : ∀ i, D i ∈ Rasp.spectralBall m n r) :
-    ∃ i j t, t ∈ Set.Icc (0 : ℝ) 1 ∧ mix t (D i) (D j) ∈ Rasp.spectralBall m n r ∧
+    (hμ : 0 ≤ μ) (D : Fin k → Creso.Mat m n) (v : Creso.Mat m n) (b : Fin k → ℝ)
+    (hf : ∀ i, D i ∈ Creso.spectralBall m n r) :
+    ∃ i j t, t ∈ Set.Icc (0 : ℝ) 1 ∧ mix t (D i) (D j) ∈ Creso.spectralBall m n r ∧
       ∀ p q s, s ∈ Set.Icc (0 : ℝ) 1 →
         certificate μ v (D p) (D q) (b p) (b q) s ≤
           certificate μ v (D i) (D j) (b i) (b j) t := by
@@ -149,6 +174,25 @@ theorem exists_matrix_decision {m n k : ℕ} [NeZero k] {r μ : ℝ}
   refine ⟨p.1, p.2, fraction p, ht, mix_feasible (hf _) (hf _) ht, ?_⟩
   intro i j s hs
   exact (segment_optimal hμ v (D i) (D j) hs).trans (hp (i, j))
+
+theorem exists_guarded_matrix_decision {m n : ℕ} {r μ : ℝ}
+    (hr : 0 ≤ r) (hμ : 0 ≤ μ) (A U C v : Creso.Mat m n) (b : Fin 4 → ℝ) :
+    ∃ i j t, t ∈ Set.Icc (0 : ℝ) 1 ∧
+      mix t (guardedLibrary r A U C i) (guardedLibrary r A U C j) ∈
+        Creso.spectralBall m n r ∧
+      ∀ p q s, s ∈ Set.Icc (0 : ℝ) 1 →
+        certificate μ v (guardedLibrary r A U C p) (guardedLibrary r A U C q)
+          (b p) (b q) s ≤
+        certificate μ v (guardedLibrary r A U C i) (guardedLibrary r A U C j)
+          (b i) (b j) t := by
+  exact exists_matrix_decision hμ _ _ _ (guardedLibrary_feasible hr A U C)
+
+theorem selected_nonnegative_progress {μ bA bB t : ℝ} {g v A B : H}
+    (ht : t ∈ Set.Icc (0 : ℝ) 1)
+    (hA : |⟪v - g, A⟫| ≤ bA) (hB : |⟪v - g, B⟫| ≤ bB)
+    (hz : 0 ≤ certificate μ v A B bA bB t) :
+    0 ≤ progress μ g (mix t A B) :=
+  hz.trans (uniform_certificate ht hA hB)
 
 theorem deflation_recovers_signal (P : H →L[ℝ] H) (g ξ : H)
     (hg : P g = 0) (hξ : P ξ = ξ) : (g + ξ) - P (g + ξ) = g := by
@@ -164,20 +208,30 @@ theorem certified_descent {μ η fnext fnow : ℝ} {g v A B : H} {bA bB t : ℝ}
   linarith
 
 theorem active_matrix_muon_gap :
-    progress 1 (Rasp.diag₂ 1 0) (Rasp.diag₂ (1 / 2) 0) -
-      progress 1 (Rasp.diag₂ 1 0) (Rasp.diag₂ (1 / 2) (1 / 2)) = 1 / 8 := by
-  simp only [progress, ← real_inner_self_eq_norm_sq, Rasp.inner_diag₂]
-  norm_num [Rasp.diag₂, Rasp.matrixEquiv, Matrix.diagonal]
+    progress 1 (Creso.diag₂ 1 0) (Creso.diag₂ (1 / 2) 0) -
+      progress 1 (Creso.diag₂ 1 0) (Creso.diag₂ (1 / 2) (1 / 2)) = 1 / 8 := by
+  simp only [progress, ← real_inner_self_eq_norm_sq, Creso.inner_diag₂]
+  norm_num [Creso.diag₂, Creso.matrixEquiv, Matrix.diagonal]
 
 theorem active_matrix_candidates_feasible :
-    Rasp.diag₂ (1 / 2) 0 ∈ Rasp.spectralBall 2 2 (1 / 2) ∧
-      Rasp.diag₂ (1 / 2) (1 / 2) ∈ Rasp.spectralBall 2 2 (1 / 2) := by
-  constructor <;> rw [Rasp.mem_spectralBall]
+    Creso.diag₂ (1 / 2) 0 ∈ Creso.spectralBall 2 2 (1 / 2) ∧
+      Creso.diag₂ (1 / 2) (1 / 2) ∈ Creso.spectralBall 2 2 (1 / 2) := by
+  constructor <;> rw [Creso.mem_spectralBall]
   all_goals
     change ‖(Matrix.diagonal _ : Matrix (Fin 2) (Fin 2) ℝ)‖ ≤ (1 / 2 : ℝ)
     rw [Matrix.l2_opNorm_diagonal]
     apply (pi_norm_le_iff_of_nonneg (by norm_num : (0 : ℝ) ≤ 1 / 2)).mpr
     intro i
     fin_cases i <;> norm_num
+
+/-- Common replica noise cancels from every difference but remains in the
+validation mean. A zero estimated envelope can then certify a harmful step. -/
+theorem dependent_matrix_certificate_counterexample :
+    progress 1 (Creso.diag₂ 0 0) (Creso.diag₂ (1 / 2) 0) <
+      certificate 1 (Creso.diag₂ 1 0) (Creso.diag₂ (1 / 2) 0)
+        (Creso.diag₂ (1 / 2) 0) 0 0 0 := by
+  rw [certificate, mix_zero]
+  simp only [progress, ← real_inner_self_eq_norm_sq, Creso.inner_diag₂]
+  norm_num [Creso.diag₂, Creso.matrixEquiv, Matrix.diagonal]
 
 end Creso

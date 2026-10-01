@@ -1,11 +1,9 @@
 {
   "schema_version": 2,
-  "active_revision": "r002",
+  "active_revision": "c001",
   "method": "CRESO",
-  "started_at": "2026-10-01T13:26:06.117676+00:00",
-  "parent_commit": "6deb195218de44312afad0fdadf0aa4bd7b77310",
   "authorized_scope": [
-    "research_redesign",
+    "research",
     "01",
     "02",
     "documentation",
@@ -60,33 +58,14 @@
   },
   "history": [
     {
-      "at": "2026-10-01T13:26:06.117676+00:00",
-      "phase": "01",
+      "at": "2026-10-01T14:44:06.985791+00:00",
+      "revision": "c001",
+      "phases": [
+        "01",
+        "02"
+      ],
       "state": "running",
-      "revision": "r002",
-      "reason": "User explicitly authorized new mechanism/theory, Lean proofs, Phase 01-02 mathematical/statistical study, instruction rewrite and push. Muon required."
-    },
-    {
-      "at": "2026-10-01T14:20:22.498600+00:00",
-      "phase": "02",
-      "state": "running",
-      "revision": "r002",
-      "reason": "Development complete; protocol and method selections frozen before fresh final draws."
+      "reason": "Standalone research, formal and numerical/statistical study authorized."
     }
-  ],
-  "dependency_reset": {
-    "affected": [
-      "01",
-      "02",
-      "03",
-      "04",
-      "05",
-      "06",
-      "07",
-      "08",
-      "09"
-    ],
-    "reason": "New estimator, decision rule and assumptions require fresh gates; r001 results remain archived evidence about RASP only.",
-    "archive": "research/r002/archive/r001-state.json"
-  }
+  ]
 }

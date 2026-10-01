@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-01T14:36:58.053829+00:00",
+  "hashes": {
+    "study.py": "039000d169f72c3a3ead76187c92c9ddd1c880c6937536ea405cc10856984a07",
+    "laws.py": "3107d750ab1907dcaf3f5f9c382b13daa14a2ab10ee9fa6fb2a1b19e30173fab",
+    "numerics.py": "1c02d5d7b69dfd9bd7e07bb954f2cfc7f8b55335221fdea1b8e3f65d86a9bb1d",
+    "test_numerics.py": "95fe21ba704dd7057de0be38c4b1ba1d23b6899ddfa6f916856ec9feb12e0775",
+    "proximal.py": "3570e08ea3426e8f8e23cd07b40cfd5af1c356c3fabe2061f196655379d999c6",
+    "protocol.json": "db72fd726b0c29aba382caf361b0fea4310622ab25e7e1296d59ba9409372cda",
+    "protocol.md": "79188249be0cf3b92839ceee0c7f0b1ced6168d928a0a13ce7f5dadb34b7a943"
+  },
+  "source_commit": "6900ec8b33aa3c8a1eeeea5dd6ae80406585fc3c",
+  "selections_sha256": "a5d17a61b66f0d7c323c5cde4301865e81d130129dda7ba417745180fbac02f6"
+}

@@ -1,40 +1,23 @@
-# Phase 04 — Data, model and comparison protocol
+# Phase 04 — Model, data and preregistration
 
-**State: not started.** Requires Phases 01–03. Freeze choices before confirmation.
+**State: not started.** Depends on Phases 01–03. Start only when requested.
 
-## Work
+Freeze one 125M model, parameter count, tokenizer and FineWeb-Edu revision,
+deduplicated splits and hashes. Every optimizer/seed receives exactly 2.5B
+training tokens. Reserve 42, 43 and 44 for confirmation. Publish tuning budgets,
+validation cadence, primary loss metric, effect threshold, paired inference,
+failure/resume policy and complete peer list before confirmation.
 
-1. Specify the **125M-parameter** decoder model: layer count, widths, heads,
-   vocabulary, positional encoding, context, activations, normalization, tying
-   and dropout. Report the exact trainable parameter count and explain the 125M
-   convention; do not silently substitute a different model size. Use identical
-   architecture, initialization, loss and parameter groups for all optimizers.
-2. Pin the [FineWeb-Edu dataset](https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu)
-   revision, selected files and hashes, tokenizer/version, shuffle, packing and
-   masking. Split by document before packing; check train/validation/test overlap.
-   Reserve validation for tuning and a locked test set for confirmation analysis.
-3. Define a training token as a nonpadding target token contributing to the loss.
-   Each optimizer/seed consumes exactly **2,500,000,000** such tokens, using an
-   identical final partial-batch mask if necessary. Log input tokens, loss tokens
-   and duplicate documents separately. Reusing two halves of one batch must not
-   double the counted data. Mask and normalize replica means correctly.
-4. Fix global batch, sequence length, schedule expressed in tokens, evaluation
-   frequency, loss aggregation, decay treatment, clipping and mixed precision.
-   Any permitted method-specific setting must be recorded and tuned fairly.
-5. Preregister quality and cost endpoints: held-out token-weighted NLL (nats/token),
-   perplexity, elapsed time including collectives, steady-state tokens/s, peak
-   memory, compile/setup cost and numerical failures. Define a common validation
-   loss target for time-to-quality without using test outcomes.
-6. Fix equal HPO opportunity, development seeds distinct from 42/43/44, practical
-   noninferiority/superiority margins, multiplicity rules and uncertainty methods.
-   Keep matched-token quality and matched-time efficiency as separate questions.
+Fix replica microbatch granularity and token accounting. A replica is a
+same-weight stochastic gradient, not a different local optimizer state. CRESO's
+proposal/calibration/validation tokens count toward its training budget; every
+peer gets the same global batch and eligible averaging information. If fewer
+replicas or a new concentration method is required, reopen 01–02.
 
-## Gates and outputs
+Prespecify CRESO rank/allowance search and match tuning opportunity for peers.
+Muon and all eligible source variants must be included. Compare quality per token,
+wall time and memory separately; do not let extra validation or data confer a
+hidden advantage. Freeze checkpoint choice and all missing-run handling.
 
-- Hashable model/data/protocol manifests and deterministic replay are validated.
-- All baselines receive the same information and declared tuning budget.
-- The complete registry, ablations and token/compute budget are enumerated.
-- The three-seed power limitation is acknowledged before observing results.
-
-Changes to data, architecture, metrics, selection or margins invalidate the
-confirmation protocol and downstream results; retain the earlier version.
+Gates: auditable model/data/token manifests, complete baseline set, fixed
+statistical families and unchanged confirmation seeds. No training executed here.

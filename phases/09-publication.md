@@ -1,42 +1,19 @@
-# Phase 09 — Paper and repository release
+# Phase 09 — Paper and standalone release
 
-**State: not started.** Requires the completed, audited record from Phases 01–08.
-A publication-quality account can report a negative result; performance claims
-must match Phase 08's evidence.
+**State: not started.** Depends on Phases 01–08. Start only when requested.
 
-## Work
+Write a standalone CRESO paper with the exact information order, projected/residual
+trace calibration, finite-segment solver, formal claims, assumptions, numerical
+limits and complete competitive study. Attribute covariance filtering, confidence
+selection and aggregation to their primary lineage. Claim only the demonstrated
+delta. No novelty or impact rating is manufactured from a new name.
 
-1. Expand `theory.md` into a journal-level paper with abstract, problem statement,
-   related work, precise contribution, method, assumptions, proofs, numerical
-   analysis, experimental protocol, complete results, limitations and conclusion.
-   Cite mathematical antecedents and the strongest relevant optimizers. Clearly
-   separate the original proposal from the final validated revision.
-2. Include exact hardware, model parameter count, dataset/tokenizer hashes,
-   tuning budgets, all three seeds, failure outcomes, effect sizes, uncertainty,
-   compute costs and practical limits. Do not claim universal superiority.
-3. Make every figure/table reproducible from archived data. Link theorem numbers
-   to Lean declarations. Run the kernel proof and axiom audit again. Ensure any
-   theorem used for approximate kernels was actually proved under its stated
-   assumptions and matches the implementation.
-4. Organize source, references, configs, tests, scripts and documentation. Add
-   concise comments explaining non-obvious mathematics, layouts and collectives.
-   Apply PEP8, an explicitly pinned formatter and linting to Python. Remove dead
-   code and transient files while preserving rejected methods and raw evidence
-   in the research archive.
-5. Rewrite the README for people: motivation, honest results, install/setup,
-   minimal examples, reproduction commands, cost expectations and limitations.
-   Check it against a fresh checkout with submodules. Include dependency and
-   upstream-license attribution, dataset terms and a suitable project license.
-6. Verify links and artifact hashes, run relevant tests, review the final diff,
-   tag the audited revision, and push the release artifacts to the user's GitHub
-   within the publication task's authorized scope. Never commit credentials,
-   large training data or private logs.
+Include every eligible peer, Muon source fidelity, matched budgets, failures,
+uncertainty, raw locations, reproduction scripts and all scope limits. If 07–08
+failed, publish a qualified mechanism/negative result rather than a winning claim.
+Refresh the closest literature before publication.
 
-## Final gate
-
-The paper, repository, Lean statements, implementation, configs and raw evidence
-describe the same method and experiment. No placeholders, fabricated results,
-unsupported novelty claims, missing eligible competitors or stale dependencies
-are hidden by prose. Provide the release commit, reproduction commands and
-remaining limitations. If the original “match every peer” objective remains
-unmet, say so explicitly in the paper and handoff.
+Release clean source, pinned Lean/mathlib/skills dependencies, kernel audit,
+protocol and evidence manifests. Exclude credentials, caches and checkpoints.
+Keep the repository instructions, paper, theory and state consistent.
+Gates: complete claim/source/artifact audit, reproducible results and honest scope.

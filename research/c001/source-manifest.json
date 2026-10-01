@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-01",
+  "sources": [
+    {
+      "id": "statsformer",
+      "url": "https://arxiv.org/html/2601.21410v1",
+      "retrieved_at": "2026-10-01T14:36:34.746825+00:00",
+      "status": "retrieved",
+      "bytes": 813004,
+      "sha256": "6b864f16ea59eb184f5caaff3fd7b359ac044db0e2408e6c32e71bdf0ac0c04c",
+      "cache_path": ".source-cache/c001/statsformer.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "worker-disagreement",
+      "url": "https://arxiv.org/html/2605.27739v1",
+      "retrieved_at": "2026-10-01T14:36:34.749224+00:00",
+      "status": "retrieved",
+      "bytes": 371101,
+      "sha256": "e606f0818d9d8d16ef12ded8ea7d1c86e56115bbc2cc84993a7171ab36bef45e",
+      "cache_path": ".source-cache/c001/worker-disagreement.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "muon-noise",
+      "url": "https://arxiv.org/html/2609.32861v1",
+      "retrieved_at": "2026-10-01T14:36:34.749805+00:00",
+      "status": "retrieved",
+      "bytes": 1009594,
+      "sha256": "db417220348742d5cf9f94cf6ee39cf31704ea6b0a6974fb22afb2cc970af9b5",
+      "cache_path": ".source-cache/c001/muon-noise.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "mars-m",
+      "url": "https://arxiv.org/html/2510.21800v3",
+      "retrieved_at": "2026-10-01T14:36:34.750380+00:00",
+      "status": "retrieved",
+      "bytes": 504835,
+      "sha256": "492e8fef30193b0a43bc3a4b0cf85b37bd9c8e940e4fc230b3024f7916f22dd4",
+      "cache_path": ".source-cache/c001/mars-m.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "adaptive-sampling",
+      "url": "https://arxiv.org/abs/1710.11258",
+      "retrieved_at": "2026-10-01T14:36:35.065138+00:00",
+      "status": "retrieved",
+      "bytes": 40195,
+      "sha256": "832883e530110d93be34b86455ce05b96f0f20f7afe6da914c882c1432da21f5",
+      "cache_path": ".source-cache/c001/adaptive-sampling.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "kalman-gradient",
+      "url": "https://arxiv.org/abs/1810.12273",
+      "retrieved_at": "2026-10-01T14:36:35.068030+00:00",
+      "status": "retrieved",
+      "bytes": 39533,
+      "sha256": "0f6bdc84e42d5068a1c3be91abf4822614290ffa84577f27a1130d405201f4a5",
+      "cache_path": ".source-cache/c001/kalman-gradient.html",
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "bounded-kurtosis",
+      "url": "https://arxiv.org/abs/2607.05226",
+      "retrieved_at": "2026-10-01T14:36:35.070360+00:00",
+      "status": "retrieved",
+      "bytes": 44232,
+      "sha256": "1cedfa206a6fe733b7261adda20b72cde2c5e8caa71dfc43a31d0485970932a1",
+      "cache_path": ".source-cache/c001/bounded-kurtosis.html",
+      "content_type": "text/html; charset=utf-8"
+    }
+  ],
+  "scope": "standalone primary source audit"
+}

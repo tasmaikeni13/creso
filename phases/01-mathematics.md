@@ -1,42 +1,35 @@
-# Phase 01 — Frontier and formal analysis
+# Phase 01 — Frontier and formal theory
 
-**State: passed (r001, 2026-10-01).** Evidence: `research/r001/phase01-handoff.md`. Inputs: `theory.md`, `formal/`, the preparation research
-record, and the literature-frontier, mechanism-transfer and theory-research skills.
+**State: running (c001).** Inputs: theory.md, research contract, literature-frontier,
+mechanism-transfer and theory-research skills. Output: phase01-handoff.md.
 
 ## Work
 
-1. Refresh literature through the execution date. Follow citations and official
-   code from the closest methods. Search operationally equivalent updates under
-   different names; compare assumptions, objective, estimator, constraint,
-   solver, parameter groups and computational cost. Freeze a dated registry.
-2. Start with AdamW and momentum SGD as controls; Muon, Shampoo, SOAP, AdaMuon,
-   NorMuon, Muon-NSR, Muon-VS, DeVA, MuCon, SPECTRA, Musec, SoftMusec, ARO and the
-   strongest available Dion variant as competitors. Inspect OptMuon and other
-   new methods for inclusion. Record each distinct eligible variant; do not
-   choose the weakest member of a family. ODE-only proposals need an actual
-   published discrete algorithm before becoming training baselines.
-3. Write exact peer update definitions and formalize comparison lemmas that the
-   proposed advantage depends on. Distinguish ideal polar updates from finite
-   Newton–Schulz code. Do not assert that every peer lacks RASP's stability.
-4. Audit every RASP equation against Lean, with rectangular shapes, zero signal,
-   zero disagreement, rank deficiency, zero radius, large/small gradient scale,
-   and input-dependent disagreement. Check units and optimizer state.
-5. Extend solver analysis to approximate projections, finite precision and
-   termination. The existing feedback bound assumes exact projection. Establish
-   a usable feasibility/VI error certificate before planning an approximate kernel.
-6. Maintain distinct candidate branches: coupled replica metric; plain spectral
-   regularization; a richer covariance sketch; and the null explanation that only
-   update magnitude matters. Use the transfer cards to reject unsupported bridges.
+1. Bound the literature check. Follow closest primary algorithms and equivalent
+   operational formulations. Credit covariance shrinkage, subspace filtering,
+   validation, aggregation and concentration as established components.
+2. Refresh the dated peer registry. Muon is mandatory; distinguish ideal polar,
+   published finite NS5 and source bf16 code. Include MONA and actual MARS-M,
+   every eligible spectral/variance/retraction family, and stronger variants.
+3. Define information order, unbiasedness, iid conditional law, fourth-moment
+   envelope, projected and residual traces, zero-trace handling and curvature.
+   Separate proposal data from every post-proposal draw.
+4. Prove actual matrix feasibility and existence, exact segment maximization,
+   simultaneous adaptive certificates, finite-law concentration transfer and
+   the in-library oracle inequality. An oracle inequality is not peer dominance.
+5. Audit zero radius/signal/noise, rectangular/rank-deficient matrices, tied
+   candidates, covariance cross terms, dependent samples and omitted noise.
+6. State continuous-law, SVD and finite-precision gaps. Measure the sampling,
+   state and communication burden; a fixed decomposition count alone is not speed.
 
 ## Gates and outputs
 
-- `lake build` and `lake env lean Audit.lean` pass with complete theorem coverage.
-- Every claimed advantage has a precise domain, proof or falsifiable hypothesis.
-- A facet comparison acknowledges SPECTRA's generic containment and the existing
-  low-rank proximal solver. Equivalent prior instantiation kills the novelty claim.
-- Output definitions, assumption ledger, competitor registry, complexity model,
-  source snapshots/hashes and revised claim map in `research/<revision>/`.
+- `lake build` and `lake env lean Audit.lean` pass; every public theorem is audited.
+- Claim map separates exact Lean claims, analytical extensions and hypotheses.
+- Closest-work differences are explicit; an equivalent method rejects novelty.
+- The dependent-replica matrix counterexample and active Muon witness are retained.
+- Source hashes, assumptions, hypotheses, competitor inventory and complexity
+  record exist. No global convergence, training win or extreme-novelty claim.
 
-If a theorem fails, repair or replace it and update all dependent phases before
-proceeding. If novelty fails, retain the useful analysis and search a different
-mechanism; a new name is not a new method.
+Repair/reprove failures within scope. Changed mathematical premises invalidate
+all dependent phases. A theorem's narrow domain must remain visible.

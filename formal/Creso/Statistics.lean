@@ -174,13 +174,13 @@ theorem adaptive_certificate_failure_mass {Ω ι H : Type*}
     (b : Ω → ι → ℝ) (threshold : ι → ℝ) (i j : Ω → ι) (t : Ω → ℝ)
     (ht : ∀ ω, t ω ∈ Set.Icc (0 : ℝ) 1) (calBad : Ω → Prop) {μ δc δv : ℝ}
     (hc : (∑ ω, if calBad ω then p ω else 0) ≤ δc)
-    (hv : (∑ ω, if ∃ k, threshold k ≤ |⟪v ω - g, D k⟫| then p ω else 0) ≤ δv)
+    (hv : (∑ ω, if ∃ k, threshold k < |⟪v ω - g, D k⟫| then p ω else 0) ≤ δv)
     (hb : ∀ ω, ¬ calBad ω → ∀ k, threshold k ≤ b ω k) :
     (∑ ω, if progress μ g (mix (t ω) (D (i ω)) (D (j ω))) <
       certificate μ (v ω) (D (i ω)) (D (j ω)) (b ω (i ω)) (b ω (j ω)) (t ω)
       then p ω else 0) ≤ δc + δv := by
   apply two_stage_failure_bound p hp calBad
-    (fun k ω => threshold k ≤ |⟪v ω - g, D k⟫|) _ hc hv
+    (fun k ω => threshold k < |⟪v ω - g, D k⟫|) _ hc hv
   intro ω hbad
   by_cases hcω : calBad ω
   · exact Or.inl hcω
@@ -188,8 +188,8 @@ theorem adaptive_certificate_failure_mass {Ω ι H : Type*}
     by_contra hn
     have hh : ∀ k, |⟪v ω - g, D k⟫| ≤ b ω k := by
       intro k
-      have hk : ¬ threshold k ≤ |⟪v ω - g, D k⟫| := fun hk => hn ⟨k, hk⟩
-      exact (le_of_lt (lt_of_not_ge hk)).trans (hb ω hcω k)
+      have hk : ¬ threshold k < |⟪v ω - g, D k⟫| := fun hk => hn ⟨k, hk⟩
+      exact (le_of_not_gt hk).trans (hb ω hcω k)
     exact (not_lt_of_ge (uniform_certificate (μ := μ) (ht ω) (hh _) (hh _))) hbad
 
 theorem finite_sum_second_moment {Ω ι : Type*} [Fintype Ω] [Fintype ι]
@@ -232,7 +232,10 @@ theorem finite_mean_second_moment {Ω ι : Type*} [Fintype Ω] [Fintype ι]
   have hn : (0 : ℝ) < Fintype.card ι := by exact_mod_cast Fintype.card_pos
   calc
     _ = (∑ ω, p ω * (∑ i, x i ω) ^ 2) / (Fintype.card ι : ℝ) ^ 2 := by
-      simp_rw [div_pow, mul_div_assoc, Finset.sum_div]
+      conv_rhs => rw [Finset.sum_div]
+      apply Finset.sum_congr rfl
+      intro ω _
+      rw [div_pow, mul_div_assoc]
     _ ≤ ((Fintype.card ι : ℝ) * v) / (Fintype.card ι : ℝ) ^ 2 :=
       div_le_div_of_nonneg_right hb (sq_nonneg _)
     _ = v / Fintype.card ι := by field_simp
