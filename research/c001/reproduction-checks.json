@@ -1,0 +1,205 @@
+{
+  "contexts": 49152,
+  "raw_files": 192,
+  "raw_bytes": 1837429329,
+  "replay": [
+    {
+      "law": "orthogonal_2x2",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 0.0,
+      "max_operator_excess": 2.220446049250313e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "rotated_4x4",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 8.881784197001252e-16,
+      "max_operator_excess": 4.440892098500626e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "rectangular_3x5",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 6.661338147750939e-16,
+      "max_operator_excess": 4.440892098500626e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "orthogonal_rank2",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 0.0,
+      "max_operator_excess": 0.0,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "mixed_signal",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 0.0,
+      "max_operator_excess": 1.1102230246251565e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "signal_noise_overlap",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 0.0,
+      "max_operator_excess": 1.1102230246251565e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "isotropic_low",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 3.885780586188048e-16,
+      "max_operator_excess": 2.220446049250313e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 147
+    },
+    {
+      "law": "isotropic_high",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 4.440892098500626e-16,
+      "max_operator_excess": 3.3306690738754696e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "zero_noise",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 0.0,
+      "max_operator_excess": 0.0,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "zero_signal",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 2.7755575615628914e-17,
+      "max_operator_excess": 0.0,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    },
+    {
+      "law": "dependent_replicas",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 0.0,
+      "max_operator_excess": 2.220446049250313e-16,
+      "trace_upper_failures": 2952,
+      "in_library_oracle_violations": 9,
+      "interior_interpolations": 4
+    },
+    {
+      "law": "heavy_tail_t3",
+      "files": 16,
+      "contexts": 4096,
+      "max_direction_replay_error": 0.0,
+      "max_independent_readout_error": 0.0,
+      "max_operator_excess": 2.220446049250313e-16,
+      "trace_upper_failures": 0,
+      "in_library_oracle_violations": 0,
+      "interior_interpolations": 0
+    }
+  ],
+  "bootstrap": [
+    {
+      "law": "orthogonal_2x2",
+      "peer": "muon_polar",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.125,
+      "family_adjusted_upper": 0.125
+    },
+    {
+      "law": "orthogonal_2x2",
+      "peer": "muon_ns5_feasible",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.1489103164137022,
+      "family_adjusted_upper": 0.15433906119616211
+    },
+    {
+      "law": "orthogonal_2x2",
+      "peer": "hard_spectral",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.05002482426104993,
+      "family_adjusted_upper": 0.05408506324615096
+    },
+    {
+      "law": "rotated_4x4",
+      "peer": "muon_polar",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.125,
+      "family_adjusted_upper": 0.125
+    },
+    {
+      "law": "rotated_4x4",
+      "peer": "muon_ns5_feasible",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.14804730101390082,
+      "family_adjusted_upper": 0.15372534442779967
+    },
+    {
+      "law": "rotated_4x4",
+      "peer": "hard_spectral",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.050957260150794735,
+      "family_adjusted_upper": 0.055059872802517805
+    },
+    {
+      "law": "rectangular_3x5",
+      "peer": "muon_polar",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.125,
+      "family_adjusted_upper": 0.125
+    },
+    {
+      "law": "rectangular_3x5",
+      "peer": "muon_ns5_feasible",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.14924508573597542,
+      "family_adjusted_upper": 0.15461041519919594
+    },
+    {
+      "law": "rectangular_3x5",
+      "peer": "hard_spectral",
+      "replicates": 2000,
+      "family_adjusted_lower": 0.050880167790142365,
+      "family_adjusted_upper": 0.05477480619407767
+    }
+  ],
+  "coverage_error_upper_zero_failures_per_law": 0.0012926982581626526
+}

@@ -1,6 +1,6 @@
 # Phase 02 — Numerical and statistical falsification
 
-**State: running (c001).** Inputs: fixed Phase 01 definitions, experimental-research
+**State: passed (c001).** Inputs: fixed Phase 01 definitions, experimental-research
 and ml-research skills. Output: frozen protocol, raw evidence and phase02-handoff.md.
 
 ## Work

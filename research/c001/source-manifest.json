@@ -70,6 +70,68 @@
       "sha256": "1cedfa206a6fe733b7261adda20b72cde2c5e8caa71dfc43a31d0485970932a1",
       "cache_path": ".source-cache/c001/bounded-kurtosis.html",
       "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "id": "consensus-gradient-chapter",
+      "url": "https://www.cse.iitb.ac.in/~cs709/2015a/notes/readingAssignment/ImprovingOptByModelingUncertainty.pdf",
+      "status": "retrieved",
+      "cache_path": ".source-cache/c001/consensus-gradient-chapter.pdf",
+      "sha256": "998f71f3fb0a312ce59f817c87ca0b0004078a805de76b3d27fc41742cc1296a",
+      "bytes": 597123,
+      "retrieval": "primary source snapshot verified by checksum"
+    },
+    {
+      "id": "tonga-2007",
+      "url": "https://papers.neurips.cc/paper_files/paper/2007/file/9f61408e3afb633e50cdf1b20de6f466-Paper.pdf",
+      "status": "retrieved",
+      "cache_path": ".source-cache/c001/tonga-2007.pdf",
+      "sha256": "ca8e2b1ae303556e8c00729c9dae51e0d7880d18dc4ff4b70660650fd016991f",
+      "bytes": 275316,
+      "retrieval": "primary source snapshot verified by checksum"
+    },
+    {
+      "id": "polora-v1",
+      "url": "https://arxiv.org/html/2607.17620v1",
+      "status": "retrieved",
+      "cache_path": ".source-cache/c001/polora-v1.html",
+      "sha256": "c6e5602978837670c9126efaa3880ebe3c177045a5ca1bff1c089422567eddf1",
+      "bytes": 569474,
+      "retrieval": "primary source snapshot verified by checksum"
+    },
+    {
+      "id": "mona-v1",
+      "url": "https://arxiv.org/html/2605.26842v1",
+      "status": "retrieved",
+      "cache_path": ".source-cache/c001/mona-v1.html",
+      "sha256": "057d4175d3916d355a736f9d101a02957d20bc948ee6c9cc20326e63775f48c7",
+      "bytes": 280899,
+      "retrieval": "primary source snapshot verified by checksum"
+    },
+    {
+      "id": "bfo.pdf",
+      "url": "https://fadili.users.greyc.fr/Pub/bibtex/manuscript/higherorderFB.pdf",
+      "status": "retrieved",
+      "cache_path": ".source-cache/c001/bfo.pdf",
+      "sha256": "7ba9b2ec842b8a442b112f8086a291d7c75061cdaa2a5ee683f616187ab35bcb",
+      "bytes": 675067,
+      "retrieval": "primary source snapshot verified by checksum"
+    },
+    {
+      "id": "spectra_framework_v2.html",
+      "url": "https://arxiv.org/html/2603.14315v2",
+      "status": "retrieved",
+      "cache_path": ".source-cache/c001/spectra_framework_v2.html",
+      "sha256": "6d435bd41ee792df63315360e292b0f1e8b36dc12d0f14318d557c0478072d9b",
+      "bytes": 1231252,
+      "retrieval": "primary source snapshot verified by checksum"
+    },
+    {
+      "id": "muon-pinned-code",
+      "url": "https://raw.githubusercontent.com/KellerJordan/Muon/f98f1cacc0263b04290753e32be8d498c1efc806/muon.py",
+      "status": "retrieved",
+      "bytes": 13205,
+      "sha256": "2479665a90124f62e4df557816665851ca317e42fcfda2af1da02c1f44ab5f3d",
+      "cache_path": ".source-cache/c001/muon-pinned.py"
     }
   ],
   "scope": "standalone primary source audit"

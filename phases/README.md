@@ -19,8 +19,8 @@ variant, including **Muon**, in the dated registry and no omitted stronger varia
 
 | Phase | Work | Dependencies | State |
 |---|---|---|---|
-| [01](01-mathematics.md) | Frontier, mechanism and formal theory | Research contract | Running |
-| [02](02-falsification.md) | Numerical and statistical attacks | 01 definitions | Running |
+| [01](01-mathematics.md) | Frontier, mechanism and formal theory | Research contract | Passed |
+| [02](02-falsification.md) | Numerical and statistical attacks | 01 definitions | Passed |
 | [03](03-reference-implementations.md) | Complete optimizer references and parity | 01–02 | Not started |
 | [04](04-protocol.md) | Model, data and preregistered comparisons | 01–03 | Not started |
 | [05](05-tpu-kernels.md) | TPU kernels and numerical certification | 03–04 | Not started |

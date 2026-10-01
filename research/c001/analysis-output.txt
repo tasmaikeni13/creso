@@ -1,0 +1,12 @@
+verified orthogonal_2x2 replay 0.0 traces 0
+verified rotated_4x4 replay 0.0 traces 0
+verified rectangular_3x5 replay 0.0 traces 0
+verified orthogonal_rank2 replay 0.0 traces 0
+verified mixed_signal replay 0.0 traces 0
+verified signal_noise_overlap replay 0.0 traces 0
+verified isotropic_low replay 0.0 traces 0
+verified isotropic_high replay 0.0 traces 0
+verified zero_noise replay 0.0 traces 0
+verified zero_signal replay 0.0 traces 0
+verified dependent_replicas replay 0.0 traces 2952
+verified heavy_tail_t3 replay 0.0 traces 0

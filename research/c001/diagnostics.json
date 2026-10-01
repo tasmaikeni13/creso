@@ -1,0 +1,221 @@
+{
+  "attacks": {
+    "seed": 20261025,
+    "contexts": 512,
+    "common_noise": {
+      "certificate_failures": 512,
+      "mean_certificate": 0.375,
+      "mean_true_progress": -0.125
+    },
+    "unlearned_residual_noise": {
+      "calibrated_failures": 0,
+      "omitted_residual_failures": 269,
+      "scope": "post-proposal law is iid Gaussian; proposal law may differ, directions remain frozen"
+    },
+    "active_interpolation": {
+      "progress_gain_over_best_vertex": 0.125,
+      "operator_norm": 0.5,
+      "fraction": 0.5
+    },
+    "cross_covariance": {
+      "true_directional_variance": 1.0,
+      "sum_without_factor_two": 0.5,
+      "certified_envelope": 1.0,
+      "law": "epsilon=Z*diag(1,1); D=diag(.5,.5); P selects first diagonal coordinate"
+    }
+  },
+  "host_profiles": [
+    {
+      "shape": [
+        8,
+        8
+      ],
+      "method": "creso",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.0004824399948120117,
+      "p95_seconds_per_decision": 0.0004930067487293854,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication",
+      "matrix_svds": 3,
+      "sketch_svds": 1,
+      "scalar_pairs": 10
+    },
+    {
+      "shape": [
+        8,
+        8
+      ],
+      "method": "muon_polar",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 5.5774988140910864e-05,
+      "p95_seconds_per_decision": 6.252600287552923e-05,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        8,
+        8
+      ],
+      "method": "muon_ns5_feasible",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 7.579251541756094e-05,
+      "p95_seconds_per_decision": 7.913449662737549e-05,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        8,
+        8
+      ],
+      "method": "hard_spectral",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 5.3369993111118674e-05,
+      "p95_seconds_per_decision": 5.450173921417445e-05,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        8,
+        8
+      ],
+      "method": "rank_one_proximal",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.001576097245560959,
+      "p95_seconds_per_decision": 0.0015834338089916855,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication",
+      "mean_matrix_svds": 40.0
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "method": "creso",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.0044664972519967705,
+      "p95_seconds_per_decision": 0.0044771727436454965,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication",
+      "matrix_svds": 3,
+      "sketch_svds": 1,
+      "scalar_pairs": 10
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "method": "muon_polar",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.0007951874868012965,
+      "p95_seconds_per_decision": 0.0008010069170268253,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "method": "muon_ns5_feasible",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.0007617324881721288,
+      "p95_seconds_per_decision": 0.0007677946763578802,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "method": "hard_spectral",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.0007717599801253527,
+      "p95_seconds_per_decision": 0.0007800014340318739,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        32,
+        32
+      ],
+      "method": "rank_one_proximal",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.010461079014930874,
+      "p95_seconds_per_decision": 0.010471748324926011,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication",
+      "mean_matrix_svds": 47.25
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "method": "creso",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.016373376245610416,
+      "p95_seconds_per_decision": 0.016602951995446348,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication",
+      "matrix_svds": 3,
+      "sketch_svds": 1,
+      "scalar_pairs": 10
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "method": "muon_polar",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.0026124322321265936,
+      "p95_seconds_per_decision": 0.0029502983205020425,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "method": "muon_ns5_feasible",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.002473477245075628,
+      "p95_seconds_per_decision": 0.0025015353225171567,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "method": "hard_spectral",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.002606482245028019,
+      "p95_seconds_per_decision": 0.0026152019330766053,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication"
+    },
+    {
+      "shape": [
+        64,
+        64
+      ],
+      "method": "rank_one_proximal",
+      "batch": 4,
+      "repeats": 7,
+      "median_seconds_per_decision": 0.04308909398969263,
+      "p95_seconds_per_decision": 0.04314522774075158,
+      "scope": "float64 host, includes replica reductions; excludes gradient generation and communication",
+      "mean_matrix_svds": 52.25
+    }
+  ]
+}

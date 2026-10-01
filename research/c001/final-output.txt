@@ -1,0 +1,13 @@
+final orthogonal_2x2 progress 0.375 primary True failures 0
+final rotated_4x4 progress 0.375 primary True failures 0
+final rectangular_3x5 progress 0.3750000000000001 primary True failures 0
+final orthogonal_rank2 progress 0.46875 primary None failures 0
+final mixed_signal progress 0.5088073730468751 primary None failures 0
+final signal_noise_overlap progress 0.375 primary None failures 0
+final isotropic_low progress 0.37418051565141264 primary None failures 0
+final isotropic_high progress 0.0 primary None failures 0
+final zero_noise progress 0.375 primary None failures 0
+final zero_signal progress 0.0 primary None failures 0
+final dependent_replicas progress 0.374799804006511 primary None failures 9
+final heavy_tail_t3 progress 0.375 primary None failures 0
+gates {'primary_effects': True, 'active_constraint': True, 'mixed_signal_validation': True, 'valid_law_coverage': True, 'feasibility': True}

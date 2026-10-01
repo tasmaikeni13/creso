@@ -1,77 +1,59 @@
-# RASP
+# CRESO
 
-**Replica-Aware Spectral Proximal optimization** is an experimental matrix
-optimizer proposal. It uses disagreement between two halves of a gradient batch
-to penalize unreliable update directions while enforcing a spectral-norm bound.
+**Certified Replica Spectral Optimization** is an experimental matrix optimizer
+that uses replica noise to propose directions and fresh data to certify and select
+feasible spectral updates. Its finite decision needs ten scalar quadratic solves.
 
-This repository contains a short theory, machine-checked mathematics and
-executed controlled simulations. Phases **01 and 02 passed on 2026-10-01**.
-Training implementations and language-model/TPU benchmarks remain future work.
+Phases **01 and 02** provide literature research, Lean proofs and controlled
+numerical/statistical analysis. No language-model or TPU training has run.
+The method has breakthrough potential as a research question; extreme novelty
+and a breakthrough are **not established** by the current evidence.
 
 ## Start here
 
-- [Theory](theory.md): update rule, assumptions, guarantees and limits.
-- [Lean proofs and claim map](formal/README.md): what has been checked.
-- [Nine research phases](phases/README.md): execution gates and revision rules.
-- [Research record](phases/research-record.md): literature, mechanism transfer,
-  alternatives and novelty boundaries.
-- [Executed results and reproduction](research/r001/README.md): 12 noise laws,
-  frozen protocol, independent evaluators, raw manifests and negative evidence.
-- [Agent instructions](AGENTS.md): how to work in this repository.
+- [Theory and assumptions](theory.md)
+- [Lean proofs and exact claim map](formal/README.md)
+- [Executed study and reproduction](research/c001/README.md)
+- [Results, ties and failures](research/c001/results.md)
+- [Primary literature and novelty boundary](research/c001/literature.md)
+- [Nine research phases](phases/README.md)
+- [Working instructions](AGENTS.md)
 
-The proposed update is more specific than ordinary variance scaling followed by
-clipping. Whether that difference helps language-model training is unknown.
-Several ingredients already occur in prior work, and the scalar solver is an
-instance of established proximal calculus. We make no claim of absolute novelty
-or superiority to existing optimizers.
+The study uses 49,152 final matrix contexts across 12 laws. Prespecified local
+contrasts include **Muon**, with ideal polar and finite NS5 distinguished.
+Covariance shrinkage controls, adverse regimes and all statistical costs remain
+visible. Local matrix results do not establish a training win against every peer.
 
 ## Verify the mathematics
 
-Install [elan](https://github.com/leanprover/elan), then:
-
 ```bash
-git clone --recurse-submodules https://github.com/tasmaikeni13/rasp.git
-cd rasp/formal
+git clone --recurse-submodules https://github.com/tasmaikeni13/creso.git
+cd creso/formal
 lake exe cache get
 lake build
 lake env lean Audit.lean
 ```
 
-The toolchain and dependency revisions are pinned. The first command in the
-formal directory downloads mathlib build artifacts. The proofs use ordinary
-Lean kernel checking, with no admitted proofs or project-specific axioms.
-The formal step is a mathematical specification, not executable optimizer code.
+Lean and mathlib are pinned; every public theorem is audited. The executable
+numerical reference is float64 CPU code. It is not a source-parity bf16 Muon or
+an implemented JAX/Pallas training optimizer.
 
-## Planned experiment
+## Future confirmation contract
 
-The confirmation target is a **125M-parameter language model**, trained on
-**2,500,000,000 FineWeb-Edu tokens per optimizer per seed**, with seeds
-**42, 43 and 44**, on a **Google Cloud TPU v4-32 slice: 16 v4 chips**.
-That is 7.5B training tokens per optimizer across the three seeds. Model count,
-data hashes, tuning budgets and the complete competitor registry are frozen
-before confirmation. Quality, elapsed time and memory are reported separately.
-
-Phases **01–02 passed**; phases **03–09 are not started**. The initial September
-review and proofs remain preparation records. The October execution adds 52
-registered peer variants, 64 audited Lean theorems, 30 numerical tests and 98,304
-final quadratic contexts. The intended law supports benefit beyond scalar damping;
-adaptive bias, dependent-replica harm and expensive active solves are retained.
-Later work starts only when requested.
-
-The research goal is to match or exceed every eligible peer under a declared
-protocol. A negative or inconclusive result remains a valid result; changing
-the model, optimizer or protocol creates a new research revision.
+One identical **125M model**, **2.5B FineWeb-Edu training tokens per optimizer
+per seed**, seeds **42, 43, 44**, on **TPU v4-32 (16 chips)**. These seeds have
+not selected the method. The 54-variant peer inventory includes Muon, MONA and
+MARS-M; complete ports and matched tuning are required before confirmation.
+Report quality, time, memory and reliability separately. Phases 03–09 await
+start instructions.
 
 ## Layout
 
 ```text
-theory.md           Short mathematical proposal
-formal/             Lean source, pinned dependencies and audit
-phases/             Nine phase instructions and preparation record
-research/r001/      Executed frontier, simulations, evidence and handoffs
-skills/             Pinned research skills submodule
-AGENTS.md           Repository working instructions
+theory.md          Mathematical decision and confidence contract
+formal/            Standalone Lean geometry, optimization and statistics
+research/c001/     Literature, frozen study, raw manifests and handoffs
+phases/            Nine execution instructions and live state
+skills/            Pinned research skills submodule
+AGENTS.md          Concrete repository rules
 ```
-
-Preparation date: 2026-09-25. See the research record for primary sources and
-which source claims have not been independently reproduced.

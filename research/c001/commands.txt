@@ -1,0 +1,14 @@
+# From repository root; install the pinned requirements into .venv first.
+.venv/bin/python -m ruff check research/c001
+.venv/bin/python -m ruff format --check research/c001
+.venv/bin/python -m pytest -q research/c001/test_*.py
+# These commands create a new target; never overwrite the frozen run-v1.
+.venv/bin/python research/c001/study.py develop --target /tmp/creso-reproduction
+.venv/bin/python research/c001/study.py final --target /tmp/creso-reproduction
+# With the committed raw assets extracted at the repository root:
+.venv/bin/python research/c001/analyze.py
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python research/c001/diagnostics.py
+# Mathematics:
+cd formal
+lake build
+lake env lean Audit.lean

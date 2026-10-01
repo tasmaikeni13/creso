@@ -234,4 +234,15 @@ theorem dependent_matrix_certificate_counterexample :
   simp only [progress, ← real_inner_self_eq_norm_sq, Creso.inner_diag₂]
   norm_num [Creso.diag₂, Creso.matrixEquiv, Matrix.diagonal]
 
+theorem strict_matrix_interpolation_gain :
+    progress 1 (diag₂ 1 0) (mix (1 / 2) (diag₂ (1 / 2) (1 / 2))
+      (diag₂ (1 / 2) (-1 / 2))) -
+      progress 1 (diag₂ 1 0) (diag₂ (1 / 2) (1 / 2)) = 1 / 8 := by
+  have hm : mix (1 / 2) (diag₂ (1 / 2) (1 / 2)) (diag₂ (1 / 2) (-1 / 2)) =
+      diag₂ (1 / 2) 0 := by
+    ext ⟨i, j⟩
+    fin_cases i <;> fin_cases j <;> norm_num [mix, diag₂, matrixEquiv, Matrix.diagonal]
+  rw [hm]
+  exact active_matrix_muon_gap
+
 end Creso

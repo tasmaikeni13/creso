@@ -1,6 +1,6 @@
 import Creso
 
--- Audit every public project theorem.
+-- Audit all public project theorems.
 #print axioms Creso.radialMatrix_feasible
 #print axioms Creso.guardedLibrary_feasible
 #print axioms Creso.mix_zero
@@ -23,6 +23,7 @@ import Creso
 #print axioms Creso.active_matrix_muon_gap
 #print axioms Creso.active_matrix_candidates_feasible
 #print axioms Creso.dependent_matrix_certificate_counterexample
+#print axioms Creso.strict_matrix_interpolation_gain
 #print axioms Creso.mem_spectralBall
 #print axioms Creso.spectralBall_convex
 #print axioms Creso.spectralBall_compact

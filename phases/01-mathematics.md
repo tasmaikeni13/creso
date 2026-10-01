@@ -1,6 +1,6 @@
 # Phase 01 — Frontier and formal theory
 
-**State: running (c001).** Inputs: theory.md, research contract, literature-frontier,
+**State: passed (c001).** Inputs: theory.md, research contract, literature-frontier,
 mechanism-transfer and theory-research skills. Output: phase01-handoff.md.
 
 ## Work

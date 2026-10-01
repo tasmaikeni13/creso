@@ -11,14 +11,42 @@
   ],
   "phases": {
     "01": {
-      "state": "running",
-      "artifacts": [],
-      "gates": {}
+      "state": "passed",
+      "artifacts": [
+        "research/c001/phase01-handoff.md",
+        "research/c001/formal-checks.json",
+        "research/c001/claim-map.json",
+        "research/c001/literature.md",
+        "research/c001/competitors.json"
+      ],
+      "gates": {
+        "formal_build_and_full_audit": true,
+        "actual_matrix_feasibility_and_existence": true,
+        "finite_statistics_and_adaptive_selection": true,
+        "scoped_literature_and_primary_registry": true,
+        "unmechanized_claims_explicit": true
+      }
     },
     "02": {
-      "state": "running",
-      "artifacts": [],
-      "gates": {}
+      "state": "passed",
+      "artifacts": [
+        "research/c001/phase02-handoff.md",
+        "research/c001/run-v1/final/results.json",
+        "research/c001/reproduction-checks.json",
+        "research/c001/diagnostics.json",
+        "research/c001/raw-storage.json",
+        "research/c001/source-muon-check.json"
+      ],
+      "gates": {
+        "primary_effects": true,
+        "active_constraint": true,
+        "mixed_signal_validation": true,
+        "valid_law_coverage": true,
+        "feasibility": true,
+        "independent_verifiers_15_tests": true,
+        "all_raw_replay": true,
+        "durable_raw_sha256": true
+      }
     },
     "03": {
       "state": "not_started",
@@ -66,6 +94,17 @@
       ],
       "state": "running",
       "reason": "Standalone research, formal and numerical/statistical study authorized."
+    },
+    {
+      "at": "2026-10-01T15:20:02.850718+00:00",
+      "revision": "c001",
+      "phases": [
+        "01",
+        "02"
+      ],
+      "state": "passed",
+      "reason": "Formal, numerical, statistical, raw replay and storage gates passed. Training/breakthrough claims remain unestablished."
     }
-  ]
+  ],
+  "completed_at": "2026-10-01T15:20:02.850718+00:00"
 }

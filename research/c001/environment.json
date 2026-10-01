@@ -1,0 +1,12 @@
+{
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "cvxpy": "1.7.5",
+  "pytest": "9.1.1",
+  "ruff": "ruff 0.16.9",
+  "platform": "Linux-5.19.0-1022-gcp-x86_64-with-glibc2.35",
+  "machine": "x86_64",
+  "cpu": "x86_64",
+  "timing_threads": 1
+}

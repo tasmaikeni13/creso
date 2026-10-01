@@ -1,0 +1,199 @@
+{
+  "revision": "c001",
+  "theorem_count": 47,
+  "theorems": [
+    {
+      "name": "Creso.radialMatrix_feasible",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.guardedLibrary_feasible",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.mix_zero",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.mix_one",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.mix_feasible",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.progress_mix",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.certificate_quadratic",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.bestFraction_mem",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.bestFraction_maximizes",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.segment_optimal",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.uniform_certificate",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.vertex_certificate_error",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.selected_oracle_bound",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.exists_finite_best",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.exists_matrix_decision",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.exists_guarded_matrix_decision",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.selected_nonnegative_progress",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.deflation_recovers_signal",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.certified_descent",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.active_matrix_muon_gap",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.active_matrix_candidates_feasible",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.dependent_matrix_certificate_counterexample",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.strict_matrix_interpolation_gain",
+      "file": "formal/Creso/Core.lean"
+    },
+    {
+      "name": "Creso.mem_spectralBall",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.spectralBall_convex",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.spectralBall_compact",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.zero_mem_spectralBall",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.asOperator_apply",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.entry_le_opNorm",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.frobenius_inner",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.diag\u2082_feasible",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.inner_diag\u2082",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.radial_feasibility",
+      "file": "formal/Creso/Geometry.lean"
+    },
+    {
+      "name": "Creso.finite_chebyshev",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.finite_union_bound",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.simultaneous_moment_bound",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.relative_trace_upper",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.trace_upper_failure_mass",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.zero_trace_exact",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.squared_sum_envelope",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.finite_split_envelope",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.finite_inner_trace_bound",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.finite_directional_envelope",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.two_stage_failure_bound",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.adaptive_certificate_failure_mass",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.finite_sum_second_moment",
+      "file": "formal/Creso/Statistics.lean"
+    },
+    {
+      "name": "Creso.finite_mean_second_moment",
+      "file": "formal/Creso/Statistics.lean"
+    }
+  ],
+  "unmechanized": [
+    "Gaussian quadratic-form moment identity and continuous-law probability extension",
+    "SVD proposal construction and numerical precision",
+    "Neural loss smoothness, momentum statistics, convergence and TPU throughput"
+  ]
+}

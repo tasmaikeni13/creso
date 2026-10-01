@@ -1,0 +1,25 @@
+{
+  "numerical_source_commit": "26ec52ebc14a5c4cef36977ad598e3f3692ed955",
+  "files": {
+    "test_numerics.py": "95fe21ba704dd7057de0be38c4b1ba1d23b6899ddfa6f916856ec9feb12e0775",
+    "numerics.py": "1c02d5d7b69dfd9bd7e07bb954f2cfc7f8b55335221fdea1b8e3f65d86a9bb1d",
+    "source_muon_check.py": "4cb60f70d55b198d3ddbdef2f54d282c76fb4b3063dff12a2bb4a2a73aa7c013",
+    "fetch_sources.py": "f9b04a77ee8c2f73ced29f4fa7cdcd7f7a6117ae98790c69bd0f375f2700f6ba",
+    "study.py": "fa31a7cf4c4b4a6fe5883c9387e0d725d20e3f4302b90300043717f62a257fca",
+    "diagnostics.py": "4d0bba912bab54621f68f241911240063a8ba8c2940ce5942c25e40718e59f1f",
+    "laws.py": "3107d750ab1907dcaf3f5f9c382b13daa14a2ab10ee9fa6fb2a1b19e30173fab",
+    "proximal.py": "b617cdbb1718206b8b326373f7b4f04768b4074aa4ff6d59f7e506c738cfd5c6",
+    "test_diagnostics.py": "862937fae072c5206c22f8b505709443845dc1218ae293bae4e643c077a37c7c",
+    "analyze.py": "13f5ebf3c20004b0f762e0794320da819a669b6b5d37e5981fab656f74f75dab"
+  },
+  "frozen_protocol_hashes": {
+    "study.py": "fa31a7cf4c4b4a6fe5883c9387e0d725d20e3f4302b90300043717f62a257fca",
+    "laws.py": "3107d750ab1907dcaf3f5f9c382b13daa14a2ab10ee9fa6fb2a1b19e30173fab",
+    "numerics.py": "1c02d5d7b69dfd9bd7e07bb954f2cfc7f8b55335221fdea1b8e3f65d86a9bb1d",
+    "test_numerics.py": "95fe21ba704dd7057de0be38c4b1ba1d23b6899ddfa6f916856ec9feb12e0775",
+    "proximal.py": "b617cdbb1718206b8b326373f7b4f04768b4074aa4ff6d59f7e506c738cfd5c6",
+    "protocol.json": "db72fd726b0c29aba382caf361b0fea4310622ab25e7e1296d59ba9409372cda",
+    "protocol.md": "79188249be0cf3b92839ceee0c7f0b1ced6168d928a0a13ce7f5dadb34b7a943"
+  },
+  "skills_commit": "0f4d8e0f9d6269094e585caded2cc8d0a9d2b0be"
+}

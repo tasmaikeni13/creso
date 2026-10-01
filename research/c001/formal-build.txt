@@ -1,0 +1,4 @@
+✔ [8880/8883] Built Creso.Core (8.4s)
+✔ [8881/8883] Built Creso.Statistics (6.8s)
+✔ [8882/8883] Built Creso (5.2s)
+Build completed successfully (8883 jobs).

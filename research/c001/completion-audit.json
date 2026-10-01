@@ -1,0 +1,19 @@
+{
+  "revision": "c001",
+  "scope_executed": [
+    "01",
+    "02"
+  ],
+  "phases_03_to_09": "not_started",
+  "public_lean_theorems": 47,
+  "numeric_tests": 15,
+  "final_contexts": 49152,
+  "raw_final_files": 192,
+  "frozen_numerical_commit": "26ec52ebc14a5c4cef36977ad598e3f3692ed955",
+  "raw_assets_server_sha256_verified": 4,
+  "breakthrough": "unestablished",
+  "extreme_novelty": "unestablished",
+  "all_peer_training_superiority": "unestablished",
+  "active_tree_name_scan": "passed",
+  "completed_at": "2026-10-01T15:20:02.850718+00:00"
+}
