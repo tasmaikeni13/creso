@@ -1,0 +1,53 @@
+[
+  {
+    "id": "consensus-gradient-chapter",
+    "url": "https://www.cse.iitb.ac.in/~cs709/2015a/notes/readingAssignment/ImprovingOptByModelingUncertainty.pdf",
+    "retrieved_at": "2026-10-01T12:34:05.425609+00:00",
+    "resolved_url": "https://www.cse.iitb.ac.in/~cs709/2015a/notes/readingAssignment/ImprovingOptByModelingUncertainty.pdf",
+    "content_type": "application/pdf",
+    "status": "retrieved",
+    "path": ".source-cache/novelty-2026-10-01/consensus-gradient-chapter.pdf",
+    "bytes": 597123,
+    "sha256": "998f71f3fb0a312ce59f817c87ca0b0004078a805de76b3d27fc41742cc1296a"
+  },
+  {
+    "id": "tonga-2007",
+    "url": "https://papers.neurips.cc/paper_files/paper/2007/file/9f61408e3afb633e50cdf1b20de6f466-Paper.pdf",
+    "retrieved_at": "2026-10-01T12:34:05.426636+00:00",
+    "resolved_url": "https://papers.neurips.cc/paper_files/paper/2007/file/9f61408e3afb633e50cdf1b20de6f466-Paper.pdf",
+    "content_type": "application/pdf",
+    "status": "retrieved",
+    "path": ".source-cache/novelty-2026-10-01/tonga-2007.pdf",
+    "bytes": 275316,
+    "sha256": "ca8e2b1ae303556e8c00729c9dae51e0d7880d18dc4ff4b70660650fd016991f"
+  },
+  {
+    "id": "polora-v1",
+    "url": "https://arxiv.org/html/2607.17620v1",
+    "retrieved_at": "2026-10-01T12:34:05.427225+00:00",
+    "resolved_url": "https://arxiv.org/html/2607.17620v1",
+    "content_type": "text/html; charset=utf-8",
+    "status": "retrieved",
+    "path": ".source-cache/novelty-2026-10-01/polora-v1.html",
+    "bytes": 569474,
+    "sha256": "c6e5602978837670c9126efaa3880ebe3c177045a5ca1bff1c089422567eddf1"
+  },
+  {
+    "id": "mona-v1",
+    "url": "https://arxiv.org/html/2605.26842v1",
+    "retrieved_at": "2026-10-01T12:34:05.427770+00:00",
+    "resolved_url": "https://arxiv.org/html/2605.26842v1",
+    "content_type": "text/html; charset=utf-8",
+    "status": "retrieved",
+    "path": ".source-cache/novelty-2026-10-01/mona-v1.html",
+    "bytes": 280899,
+    "sha256": "057d4175d3916d355a736f9d101a02957d20bc948ee6c9cc20326e63775f48c7"
+  },
+  {
+    "id": "fed-sr-2026",
+    "url": "https://www.mdpi.com/2227-7390/14/15/2819",
+    "retrieved_at": "2026-10-01T12:34:05.428300+00:00",
+    "status": "failed",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  }
+]

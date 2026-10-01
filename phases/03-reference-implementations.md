@@ -5,6 +5,10 @@
 Execution handoff: `research/r001/phase02-handoff.md`. The study evaluator and
 one-step maps are research artifacts, not these complete multi-step optimizer
 ports. Use all 52 registry IDs and preserve the paper/code discrepancies.
+Also include the eligible MONA variant in the
+[subsequent literature addendum](../research/novelty-2026-10-01/baseline-addendum.json)
+before freezing the future comparison inventory. This discovery does not change
+the already executed r001 one-step simulations.
 
 ## Work
 

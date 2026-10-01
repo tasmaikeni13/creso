@@ -18,3 +18,9 @@ No experimental run has been discarded. Structured records are in `failures.json
 | F08 | Correlated halves break magnitude calibration; anticorrelated halves can remove useful signal | Preserve invalid-premise and negative matrix attacks | Negative sampling evidence |
 | F09 | Dense active bisection needs about 55 SVDs; Brent still about 19 | Reject dense production branch; preserve both costs; Phase 05 numerical/cost gates remain open | Numerical branch rejected, kernel unresolved |
 | F10 | Signal-aligned noise gain is below the intended threshold; transferred γ interval is inconclusive | Retain weak/null outcomes; no universal useful-γ claim | Mechanism boundary retained |
+
+## Subsequent literature correction
+
+| ID | Observation | Action / dependent effect | State |
+|---|---|---|---|
+| F11 | Earlier frontier omitted a direct uncertainty-shrinkage predecessor and eligible MONA peer | Add bounded-search evidence, narrow component novelty, add MONA to the future Phase 03 inventory; retain exact method and frozen measurements | Literature repaired; full-update novelty remains a working inference |

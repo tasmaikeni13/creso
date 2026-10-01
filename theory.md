@@ -139,7 +139,11 @@ coupled to spectral feasibility. [SPECTRA](https://arxiv.org/abs/2603.14315)
 already supplies a general composite framework broad enough to contain this
 objective. The projection, proximal solver, strong convexity and mean–variance
 principle are prior mathematics. No equivalent instantiated update was found in
-the [searched corpus](phases/research-record.md); absolute novelty is unverified.
+the [searched corpus](phases/research-record.md). The subsequent
+[bounded check](research/novelty-2026-10-01/README.md) found that consensus gradients
+already contain the unconstrained two-observation shrinkage. The exact coupled
+update remains apparently distinct; this supports a working algorithmic novelty
+claim. Its primitives are prior art.
 
 The split reuses the same tokens but adds gradient storage/communication.
 Repeated projections may be too expensive. $\mu,\gamma$ require scale calibration;

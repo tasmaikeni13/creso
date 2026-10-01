@@ -3,6 +3,7 @@
 Phases **01 and 02 passed** on 2026-10-01. Later phases have not started.
 
 - [Findings and negative evidence](results.md)
+- [Subsequent bounded novelty check](../novelty-2026-10-01/README.md)
 - [Phase 01 handoff](phase01-handoff.md)
 - [Phase 02 handoff](phase02-handoff.md)
 - [Frozen competitor definitions](peer-updates.md) and [registry](competitors.json)

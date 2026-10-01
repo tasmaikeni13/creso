@@ -133,6 +133,11 @@ dimensioned parameters; loss rescaling changes their calibration.
 
 ## Adversarial novelty comparison
 
+Follow-up: the [bounded 2026-10-01 check](../research/novelty-2026-10-01/README.md)
+resolved a missing consensus-gradient precedent and retained the working novelty
+claim for the exact coupled update. Its ledger and source hashes are separate
+from the preparation and r001 records.
+
 | Closest predecessor | Shared content | Proposed residual delta / unresolved issue |
 |---|---|---|
 | MuCon / smooth spectral maps | Regularized bounded spectral update | Specific simultaneous-disagreement metric is added; clipping/smoothing is not the contribution |

@@ -40,6 +40,11 @@ Phase 04 must match tuning opportunity. Neither has begun.
 
 ## Frontier conclusion
 
+The [subsequent bounded check](../novelty-2026-10-01/README.md) adds direct
+consensus-gradient prior art and retains N1 for the full coupled update. It also
+records MONA as an additional eligible peer for the future comparison inventory.
+The frozen execution records remain the original 52-variant inventory.
+
 The occupied primitives prevent the requested claim that these primitives have
 never been discussed. The supported opportunity is the apparently distinct
 instantiation and its measurable use of current noise orientation. Phase 02 can
