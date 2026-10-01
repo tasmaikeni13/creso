@@ -4,9 +4,9 @@
 optimizer proposal. It uses disagreement between two halves of a gradient batch
 to penalize unreliable update directions while enforcing a spectral-norm bound.
 
-This repository contains a short theory, machine-checked exact mathematics,
-and a research plan. It does not yet contain a training implementation or
-benchmark results.
+This repository contains a short theory, machine-checked mathematics and
+executed controlled simulations. Phases **01 and 02 passed on 2026-10-01**.
+Training implementations and language-model/TPU benchmarks remain future work.
 
 ## Start here
 
@@ -15,6 +15,8 @@ benchmark results.
 - [Nine research phases](phases/README.md): execution gates and revision rules.
 - [Research record](phases/research-record.md): literature, mechanism transfer,
   alternatives and novelty boundaries.
+- [Executed results and reproduction](research/r001/README.md): 12 noise laws,
+  frozen protocol, independent evaluators, raw manifests and negative evidence.
 - [Agent instructions](AGENTS.md): how to work in this repository.
 
 The proposed update is more specific than ordinary variance scaling followed by
@@ -49,11 +51,12 @@ That is 7.5B training tokens per optimizer across the three seeds. Model count,
 data hashes, tuning budgets and the complete competitor registry are frozen
 before confirmation. Quality, elapsed time and memory are reported separately.
 
-All nine phases are **not started**. The initial literature review and Lean
-proofs are preparation for them. To begin, ask the agent to execute a phase, for
-example: “Execute Phase 01.” The agent repairs failed work and its dependents
-within the requested scope, retaining failures and updating the theory. Training
-does not start until its phase is requested.
+Phases **01–02 passed**; phases **03–09 are not started**. The initial September
+review and proofs remain preparation records. The October execution adds 52
+registered peer variants, 64 audited Lean theorems, 30 numerical tests and 98,304
+final quadratic contexts. The intended law supports benefit beyond scalar damping;
+adaptive bias, dependent-replica harm and expensive active solves are retained.
+Later work starts only when requested.
 
 The research goal is to match or exceed every eligible peer under a declared
 protocol. A negative or inconclusive result remains a valid result; changing
@@ -65,6 +68,7 @@ the model, optimizer or protocol creates a new research revision.
 theory.md           Short mathematical proposal
 formal/             Lean source, pinned dependencies and audit
 phases/             Nine phase instructions and preparation record
+research/r001/      Executed frontier, simulations, evidence and handoffs
 skills/             Pinned research skills submodule
 AGENTS.md           Repository working instructions
 ```

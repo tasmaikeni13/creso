@@ -14,3 +14,4 @@ wandb/
 .DS_Store
 .source-cache/
 research/**/*.npz
+research/**/reproduction/

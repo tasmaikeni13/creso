@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-01T10:33:53.495817+00:00",
+  "hashes": {
+    "diagnostics.py": "ef5ef4744eb25c4b35831e50118b3e2040b23af265591e5fd998c3c983a33a95",
+    "laws.py": "0c9e783ca83de08d0f66fb85bb78b4b608d222f704368134925eb767a3ae557a",
+    "numerics.py": "0482bf11aa5be2e8b589141fd6952230f63975c7f08325e4f18b1272cbd0a051",
+    "study.py": "e04cf2a83408769f0a4c61b8d7459bacf10d0ed31e56d2385b645fd5fc2e537c",
+    "test_numerics.py": "e8ac7622367a9c202cdac7371f85b06fb911cb444763107b110d0c7ab86a6a83",
+    "protocol.json": "e198b81a7ebe7670794c5a01085424c5d5060a61aa67e51f394782da13ef93c7",
+    "protocol.md": "614ca9b4d4f76a3cd1daefdae3e07b907d993251a8839c7f7e93d0f70c0dced8"
+  },
+  "source_commit": "9c7b8a5eee68fed8f334d28cb1a6647e12d36290",
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "cpu_wall_seconds": 85.97884162096307,
+  "primary_gate_passed": true,
+  "primary_gamma": 1000.0,
+  "raw_files": {
+    "correlated_halves.npz": "c0b014fe0f4fe2377b2a574aa7b44910610a89d3d2db9686b8d5ac492f02b861",
+    "multirank_anisotropic.npz": "44a0b01a6cfcbccee07869b01610c6b148cf47610db831e194275dc4233b6c51",
+    "near_zero_singular_values.npz": "a662509a9cec50ff59148388b9e4372582f6ed065f6c768bbfdb6af38119f7f6",
+    "nearly_deterministic.npz": "09fed71eb8d4699e80c25e928b2a72d1b9a9d354205af2718e54dc517020a9af",
+    "noise_aligned_with_signal.npz": "b34200e2024c888a20c3449cf1e32b260793cb5dfcd2faac61ff35d4fe6018a5",
+    "rank_deficient_signal.npz": "d96a71f34768e30fbf58156445d44c91491854fcba792898e9bab6c614dfaa6b",
+    "rare_centered_outliers.npz": "e6844c4bb6d361150677ea304a1e5940a69cea251553b093f05448b1a47f092c",
+    "rotating_rank_one_gaussian.npz": "80a661d743e55cc85c6f3366f148a191ab11a5fafd76747f74cfca1643dedd6d",
+    "rotating_signal_momentum.npz": "e74de08e78321a070073bc9c6e502eba21dbb53ff6249cd9896184e9701738f1",
+    "student_t5.npz": "1dd749c05fbbecb6d72cb3e69b2f4afca45a5d4c1d6d18b8e5414ead7d95dc67",
+    "tall_rank_one_gaussian.npz": "b45f4cb2f0158f1b3fcb7c2e92d2fe6fbe11736921c0f9a921dfebf4caf3aabb",
+    "unequal_biased_halves.npz": "43c45541f36c7e091147c970f999dd7090ee8c7efd8fa6a02179f7ba7369043f"
+  }
+}

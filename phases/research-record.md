@@ -4,6 +4,15 @@
 unexecuted. This record is separate from the short theory so its contribution
 boundary, alternatives and future tests remain auditable.
 
+**Execution addendum, 2026-10-01:** this dated preparation record is preserved.
+Phases 01–02 have now executed; [r001](../research/r001/README.md) is the current
+evidence. It records 52 comparator variants, approximate certificates, 64 audited
+public theorems, 30 Python tests and a fixed controlled study of 98,304 final
+contexts. H1 is supported only in the named rotating rank-one law; adaptive
+calibration fails, dependent replicas can harm and active solver work is a
+serious implementation risk. All training and TPU claims remain open. Do not
+read the preparation's historical “unexecuted” statements as current phase state.
+
 ## Contract and evidence labels
 
 Target: a matrix update that uses observable gradient uncertainty when choosing a

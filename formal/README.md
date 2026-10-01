@@ -23,7 +23,8 @@ lake env lean Audit.lean
   admitted proofs, `native_decide` proofs or unsafe shortcuts.
 
 The preparation build and axiom audit passed on 2026-09-25 (49 public theorems).
-Phase 01 passed on 2026-10-01: **61 public theorems plus `matrixStep`**,
+Phase 01 passed on 2026-10-01 (61 public theorems); the Phase 02 counterexample
+extension passes with **64 public theorems plus `matrixStep`**,
 using only the three standard axioms listed above. All nine
 dependency checkouts matched their pinned commits and had no local edits.
 Local `.lake` caches are excluded from Git. A fresh checkout obtains the pinned
@@ -57,6 +58,7 @@ All names below are in the namespace `Rasp`.
 | Approximate projection | Projection error εp and computed feedback εf give μ‖Dhat−Dstar‖≤μεp+(εf+γ‖E‖εp)‖E‖; feasibility is separate | `dualStep_lipschitz`, `approximate_feedback_error` in Approximation |
 | Root termination | Initial bracket ±\|F(0)\|; exact signs contain the root; midpoint error and dyadic widths bound step error | `feedback_initial_bracket`, `feedback_root_interval`, `interval_midpoint_error`, `bisection_step_error`, `bisection_width_step` in Approximation |
 | Feasibility repair | Actual operator bound b>0 allows scaling by min(1,r/b), including r=0 | `radial_feasibility` in Approximation |
+| Finite adaptive counterexample | Four uniform iid ±1 cells give realized surrogate zero, step second moment 1/2 and factorized fresh risk 1/4 | `adaptive_example_realized_zero`, `adaptive_example_step_second_moment`, `adaptive_example_fresh_risk_quarter` in [StatisticalExamples.lean](Rasp/StatisticalExamples.lean); arithmetic averages, not a replacement for matrix existence |
 
 The example's Euclidean projection is expressed as `Solves K 1 0 X 0 C`;
 `project_minimizes_distance` and uniqueness connect that predicate to the

@@ -63,3 +63,6 @@ import Rasp
 #print axioms Rasp.interval_midpoint_error
 #print axioms Rasp.bisection_step_error
 #print axioms Rasp.bisection_width_step
+#print axioms Rasp.adaptive_example_realized_zero
+#print axioms Rasp.adaptive_example_step_second_moment
+#print axioms Rasp.adaptive_example_fresh_risk_quarter

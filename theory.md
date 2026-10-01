@@ -56,6 +56,9 @@ $$
 Lean proves the finite weighted double sum with joint mass $p_ip_j$.
 This is **not an unbiased-risk theorem for the adaptive $D_t$**, nor an estimator
 identity for momentum noise. Correlated or unequal batches need a revised model.
+Phase 02's finite iid ±1 arithmetic example computes a realized adaptive
+surrogate of zero and factorized fresh risk 1/4; its averages are Lean proved in
+[StatisticalExamples.lean](formal/Rasp/StatisticalExamples.lean).
 
 ## 3. Exact guarantees
 
@@ -143,3 +146,17 @@ Repeated projections may be too expensive. $\mu,\gamma$ require scale calibratio
 loss-scale invariance is not claimed. Rank-one noise coverage and adaptive
 estimation may make RASP worse than simpler clipping. The phases must test these
 failure modes before any claim of better loss, speed or memory use.
+
+## 6. Executed mechanism evidence
+
+Phases 01–02 executed on 2026-10-01; see the [full report](research/r001/results.md).
+A preregistered rotating rank-one Gaussian quadratic law supports a directional
+benefit over γ=0, shuffled disagreement and equal-norm random disagreement at
+the same update norm and stepsize. The independent loss-decrease contrast over
+γ=0 is 0.11505, with adjusted interval [0.10269,0.12742]. This is a controlled
+one-step simulation with unusually informative disagreement, not training.
+
+Adaptive risk is biased, dependent replicas can harm, and active spectral solves
+are expensive. A full peer registry/parity, certified TPU kernel and matched
+language-model comparison still require their later phases. The occupied
+primitives and apparently distinct instantiation boundary remain unchanged.

@@ -3,6 +3,12 @@
 **State: not started.** Requires Phases 03–04 and the approximate-solver analysis
 from Phase 01. Target: Google Cloud TPU v4-32, **16 v4 chips**.
 
+Phase 02 identifies a cost hazard: active rank-deficient bisection required
+55 mean SVDs in small matrices; exploratory Brent still required about 19.
+Dense active SVD is not an accepted production kernel. Use the approximate
+VI/projection certificates and certified inactive checks, and retain the
+existing end-to-end cost gate. No CPU count or timing clears this phase.
+
 ## Work
 
 1. Record actual hosts, processes, `jax.devices()`, chip/core mapping, topology,

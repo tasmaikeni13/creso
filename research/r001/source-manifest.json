@@ -843,5 +843,14 @@
       "https://github.com/sgugger/Adam-experiments"
     ],
     "version_history": "."
+  },
+  {
+    "id": "lewis_duality",
+    "url": "https://people.orie.cornell.edu/aslewis/publications/95-convex.pdf",
+    "retrieved_at": "2026-10-01T10:44:09.033905+00:00",
+    "sha256": "7cf1462ea0f7de116b2a6acd66080d401062032fbde0a450c91dea9fb0bd81cc",
+    "bytes": 135102,
+    "snapshot": ".source-cache/r001/lewis_duality.pdf",
+    "content_type": "application/pdf"
   }
 ]

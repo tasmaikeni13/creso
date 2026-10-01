@@ -2,6 +2,10 @@
 
 **State: not started.** Requires Phases 01–02. No TPU optimization yet.
 
+Execution handoff: `research/r001/phase02-handoff.md`. The study evaluator and
+one-step maps are research artifacts, not these complete multi-step optimizer
+ports. Use all 52 registry IDs and preserve the paper/code discrepancies.
+
 ## Work
 
 1. Implement a float64 CPU RASP reference directly from the frozen equations.

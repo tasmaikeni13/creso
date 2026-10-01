@@ -1,6 +1,6 @@
 # Phase 02 — Mathematical attacks and statistical simulation
 
-**State: running (r001, 2026-10-01).** Requires Phase 01. Apply theory-research and
+**State: passed (r001, 2026-10-01).** Evidence: `research/r001/phase02-handoff.md`. Requires Phase 01. Apply theory-research and
 experimental-research; simulations here test mechanisms, not LLM performance.
 
 ## Work

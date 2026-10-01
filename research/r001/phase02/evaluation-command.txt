@@ -1,0 +1,13 @@
+final rotating_rank_one_gaussian gamma 1000.0 matched advantage 0.11505306579008975
+final tall_rank_one_gaussian gamma 1000.0 matched advantage 0.11552040048591725
+final rank_deficient_signal gamma 1000.0 matched advantage 0.1289578117653307
+final near_zero_singular_values gamma 1000.0 matched advantage 0.12672796850272394
+final student_t5 gamma 1000.0 matched advantage 0.1134758326662109
+final rare_centered_outliers gamma 1000.0 matched advantage 0.02138424520304884
+final multirank_anisotropic gamma 100.0 matched advantage 0.04639576085613722
+final correlated_halves gamma 1000.0 matched advantage 0.13952407874854256
+final unequal_biased_halves gamma 1.0 matched advantage 0.05625111224972472
+final noise_aligned_with_signal gamma 0.1 matched advantage 0.006328890192654129
+final nearly_deterministic gamma 0.0 matched advantage 0.0
+final rotating_signal_momentum gamma 1000.0 matched advantage 0.05608460988733975
+PRIMARY GATE True

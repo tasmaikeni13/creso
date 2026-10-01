@@ -26,7 +26,7 @@ remain visible; do not iterate by selecting lucky seeds or weakening baselines.
 | Phase | Work | Depends on | State |
 |---|---|---|---|
 | [01](01-mathematics.md) | Frontier, definitions and formal analysis | Preparation | Passed |
-| [02](02-falsification.md) | Mathematical attacks and statistical simulations | 01 | Running |
+| [02](02-falsification.md) | Mathematical attacks and statistical simulations | 01 | Passed |
 | [03](03-reference-implementations.md) | CPU reference methods and correctness | 01–02 | Not started |
 | [04](04-protocol.md) | Data, 125M model and preregistered protocol | 01–03 | Not started |
 | [05](05-tpu-kernels.md) | TPU implementation and numerical certification | 03–04 | Not started |

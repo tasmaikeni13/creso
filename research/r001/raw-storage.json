@@ -1,0 +1,10 @@
+{
+  "archive": "r001-raw-evidence.tar",
+  "bytes": 449464320,
+  "sha256": "d05385d95b931ff4ec373263db91510dc1fd5e75d3917b57e071c9c4475dc8f2",
+  "release_tag": "r001-phase01-02",
+  "repository": "tasmaikeni13/rasp",
+  "status": "prepared_for_draft_release",
+  "contents": "All 12 original raw NPZ files plus immutable final summaries and manifest",
+  "raw_files_tracked_in_git": false
+}

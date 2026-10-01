@@ -32,8 +32,9 @@ Phase 04 must match tuning opportunity. Neither has begun.
 | P2 | Fixed E gives Lipschitz signal response and antitone realized penalty | Proved: `lipschitz_signal`, `disagreement_antitone` | Not adaptive risk or a universal comparative advantage |
 | P3 | Coupled constrained solve differs from inverse-then-project | Proved actual matrix example and gap 1/9 | Existence example only; no guarantee every input benefits |
 | P4 | Approximate feasible VI bounds objective/distance; roundoff and projection errors propagate | Proved: twelve new declarations in `Approximation.lean`; full map in `formal/README.md` | Numerical primitive must justify error bounds. No verified SVD/bf16 extraction |
+| P5 | Finite adaptive averages need not match fresh risk | Three proved arithmetic averages in `StatisticalExamples.lean` | Realized zero versus factorized fresh risk 1/4; no broad risk unbiasedness |
 | N1 | Specific same-weight split-gradient instantiation appears distinct | Literature inference, finite inspected corpus | Equivalent prior update kills this; absolute primitive novelty is unsupported |
-| H1 | Current disagreement orientation helps true progress beyond damping | Hypothesis, frozen Phase 02 experiment | Norm matching and shuffled E; adaptive bias / aligned-noise reversal attacks |
+| H1 | Current disagreement orientation helps true progress beyond damping | Measured support in frozen Phase 02 rotating rank-one law; see `results.md` | All three primary adjusted lower bounds exceed 0.01; not a training or universal gain |
 | H2 | Broader covariance can improve rank-one coverage | Hypothesis / oracle diagnostic only | Additional observations and solver work may make it unusable |
 | H3 | RASP beats peers on 125M/FineWeb-Edu/TPU | Untested hypothesis | No training, TPU timing or all-peer measurement exists |
 
