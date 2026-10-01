@@ -15,5 +15,6 @@
   "complete_raw_replay": true,
   "later_phases_not_started": true,
   "raw_archive_durable_github_storage": true,
-  "remote_archive_sha256_verified": true
+  "remote_archive_sha256_verified": true,
+  "raw_archive_download_verified": true
 }

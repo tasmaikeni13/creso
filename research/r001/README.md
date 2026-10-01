@@ -52,10 +52,14 @@ owner can download it with authenticated GitHub CLI. Verify its SHA256 against
 `raw-storage.json` before extracting at the repository root:
 
 ```bash
-gh release download r001-phase01-02 --repo tasmaikeni13/rasp --pattern r001-raw-evidence.tar --dir .source-cache
+mkdir -p .source-cache
+gh api --header 'Accept: application/octet-stream' repos/tasmaikeni13/rasp/releases/assets/603062780 > .source-cache/r001-raw-evidence.tar
 sha256sum .source-cache/r001-raw-evidence.tar
 tar -xf .source-cache/r001-raw-evidence.tar
 ```
+
+The asset API works for the authenticated owner while the release is a draft;
+the public release-by-tag endpoint does not expose draft releases.
 
 ```bash
 .venv/bin/python research/r001/phase02/study.py develop --output research/r001/phase02/reproduction
