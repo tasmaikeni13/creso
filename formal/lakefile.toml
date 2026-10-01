@@ -1,6 +1,6 @@
 name = "rasp"
 version = "0.1.0"
-defaultTargets = ["Rasp"]
+defaultTargets = ["Rasp", "Creso"]
 
 [[require]]
 name = "mathlib"
@@ -10,3 +10,6 @@ rev = "7974e751bece493b6ff508039423ca9fa2452fa8"
 
 [[lean_lib]]
 name = "Rasp"
+
+[[lean_lib]]
+name = "Creso"

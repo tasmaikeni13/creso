@@ -1,0 +1,12 @@
+development orthogonal_2x2 0
+development rotated_4x4 0
+development rectangular_3x5 0
+development orthogonal_rank2 6
+development mixed_signal 0
+development signal_noise_overlap 0
+development isotropic_low 0
+development isotropic_high 0
+development zero_noise 0
+development zero_signal 0
+development dependent_replicas 5
+development heavy_tail_t3 0

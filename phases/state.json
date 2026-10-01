@@ -1,65 +1,26 @@
 {
-  "schema_version": 1,
-  "active_revision": "r001",
-  "started_at": "2026-10-01T09:43:23Z",
-  "preparation_commit": "318c9ea",
+  "schema_version": 2,
+  "active_revision": "r002",
+  "method": "CRESO",
+  "started_at": "2026-10-01T13:26:06.117676+00:00",
+  "parent_commit": "6deb195218de44312afad0fdadf0aa4bd7b77310",
   "authorized_scope": [
+    "research_redesign",
     "01",
-    "02"
+    "02",
+    "documentation",
+    "push"
   ],
   "phases": {
     "01": {
-      "state": "passed",
-      "completed_at": "2026-10-01T10:19:28.671158+00:00",
-      "artifacts": [
-        "research/r001/phase01-handoff.md",
-        "research/r001/evidence.md",
-        "research/r001/competitors.json",
-        "research/r001/formal-checks.json",
-        "research/r001/formal-checks-phase02.json"
-      ],
-      "gates": {
-        "lean_build": true,
-        "axiom_audit_all_61_theorems": true,
-        "matrix_not_scalar": true,
-        "advantage_domains_and_falsifiers": true,
-        "prior_containment_acknowledged": true,
-        "dated_sources_and_definitions": true
-      },
-      "final_public_theorems": 64
+      "state": "running",
+      "artifacts": [],
+      "gates": {}
     },
     "02": {
-      "state": "passed",
-      "started_at": "2026-10-01T10:19:28.671158+00:00",
-      "completed_at": "2026-10-01T10:58:19.343744+00:00",
-      "revision": "r001-p02-v1",
-      "artifacts": [
-        "research/r001/phase02-handoff.md",
-        "research/r001/results.md",
-        "research/r001/phase02/run-v1/final/manifest.json",
-        "research/r001/raw-audit.json",
-        "research/r001/reproduction-checks.json",
-        "research/r001/raw-storage.json"
-      ],
-      "gates": {
-        "independent_solver_objective_VI_feasibility": true,
-        "analytic_matrix_and_finite_population_attacks": true,
-        "fixed_protocol_and_selection_before_final": true,
-        "all_three_matched_primary_contrasts_above_0.01": true,
-        "negative_and_adversarial_results_preserved": true,
-        "independent_progress_and_estimator_bias_separated": true,
-        "momentum_covariance_separate": true,
-        "coverage_diagnostic": true,
-        "raw_hashes_and_full_replay": true,
-        "cost_and_communication_recorded": true,
-        "raw_durable_external_storage_verified": true
-      },
-      "limitations": [
-        "No new-primitive novelty established",
-        "Only controlled mathematical maps, not full training peers",
-        "Active dense solver rejected; certified TPU cost unresolved",
-        "Phases 03-09 not started"
-      ]
+      "state": "running",
+      "artifacts": [],
+      "gates": {}
     },
     "03": {
       "state": "not_started",
@@ -99,32 +60,33 @@
   },
   "history": [
     {
-      "at": "2026-10-01T09:43:23Z",
+      "at": "2026-10-01T13:26:06.117676+00:00",
       "phase": "01",
       "state": "running",
-      "revision": "r001",
-      "reason": "User authorized phases 01 and 02 only."
+      "revision": "r002",
+      "reason": "User explicitly authorized new mechanism/theory, Lean proofs, Phase 01-02 mathematical/statistical study, instruction rewrite and push. Muon required."
     },
     {
-      "at": "2026-10-01T10:19:28.671158+00:00",
-      "phase": "01",
-      "state": "passed",
-      "revision": "r001",
-      "reason": "Frontier, claim map and complete formal audit pass."
-    },
-    {
-      "at": "2026-10-01T10:19:28.671158+00:00",
+      "at": "2026-10-01T14:20:22.498600+00:00",
       "phase": "02",
       "state": "running",
-      "revision": "r001",
-      "reason": "Authorized mechanism falsification, dependent on passed Phase 01."
-    },
-    {
-      "at": "2026-10-01T10:58:19.343744+00:00",
-      "phase": "02",
-      "state": "passed",
-      "revision": "r001",
-      "reason": "Fixed mechanism study, independent evaluators, negative attacks and full raw replay pass; production dense solver rejected and future cost gate preserved."
+      "revision": "r002",
+      "reason": "Development complete; protocol and method selections frozen before fresh final draws."
     }
-  ]
+  ],
+  "dependency_reset": {
+    "affected": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09"
+    ],
+    "reason": "New estimator, decision rule and assumptions require fresh gates; r001 results remain archived evidence about RASP only.",
+    "archive": "research/r002/archive/r001-state.json"
+  }
 }
