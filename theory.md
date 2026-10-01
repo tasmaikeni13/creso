@@ -1,6 +1,6 @@
 # RASP: Replica-Aware Spectral Proximal optimization
 
-**Research proposal · 25 September 2026.** The exact per-step mathematics below is
+**Research specification · updated 1 October 2026.** The exact per-step mathematics below is
 proved in [Lean](formal/README.md). Training performance and publication novelty
 remain hypotheses.
 
@@ -111,8 +111,16 @@ For $b\ge a$, $F(b)-F(a)\ge b-a$; with **exact projections**,
 $\mu\|D(z)-D_t\|_F\le|F(z)|\|E\|_F$.
 The scalar reduction specializes known low-rank proximal calculus
 ([Becker–Fadili–Ochs, Theorem 3.8](https://fadili.users.greyc.fr/Pub/bibtex/manuscript/higherorderFB.pdf)).
-Lean specifies the projection variationally; an executable SVD or TPU
-approximation and its error analysis belong to the later phases.
+Lean specifies the projection variationally. Phase 01 adds approximate
+certificates in [Approximation.lean](formal/Rasp/Approximation.lean): if
+`||Dhat-D(z)||F≤εp` and `|z-γ<E,Dhat>|≤εf`, then
+`μ||Dhat-Dstar||F≤μεp+(εf+γ||E||F εp)||E||F`. Feasibility is separate.
+For a feasible ε-VI point, the objective gap is at most ε and
+`μ||Dhat-Dstar||F²≤ε`. A residual error bound τ enlarges the VI tolerance
+by τ times a feasible diameter. The actual matrix ball permits radial repair
+using a certified operator upper bound. None of these theorems verifies numerical
+SVD or bf16 arithmetic. Exact bracket signs give dyadic bisection termination;
+uncertain computed signs require the residual certificate instead.
 
 Coupling matters: with $\mu=\gamma=r=1$, $M=\operatorname{diag}(3,1)$ and
 $E=\operatorname{diag}(1,1)$, the unconstrained solution is

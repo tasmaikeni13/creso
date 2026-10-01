@@ -22,8 +22,9 @@ lake env lean Audit.lean
   `Classical.choice`, and `Quot.sound`, or no axioms. There are no project axioms,
   admitted proofs, `native_decide` proofs or unsafe shortcuts.
 
-The preparation build and axiom audit passed on 2026-09-25: **49 public theorems
-plus `matrixStep`**, using only the three standard axioms listed above. All nine
+The preparation build and axiom audit passed on 2026-09-25 (49 public theorems).
+Phase 01 passed on 2026-10-01: **61 public theorems plus `matrixStep`**,
+using only the three standard axioms listed above. All nine
 dependency checkouts matched their pinned commits and had no local edits.
 Local `.lake` caches are excluded from Git. A fresh checkout obtains the pinned
 dependencies and their caches; no absolute local path is required by the package
@@ -50,6 +51,12 @@ All names below are in the namespace `Rasp`.
 | Eq. (7), projection and root | Euclidean projection specification, equivalence to isotropic minimization, both directions of the root/solution connection | `project_minimizes_distance`, `isotropicStep_eq_project`, `root_solves`, `solution_is_dualStep` in [Solver.lean](Rasp/Solver.lean) |
 | Eq. (7), solvability/certificate | A root exists, is unique, has the stated monotonicity bound, and gives the exact-projection error certificate | `exists_root`, `root_unique`, `feedback_strong_mono`, `feedback_error_bound` in Solver |
 | 2×2 noncommutation example | Full matrix feasibility and constrained optimality, unconstrained optimality, Euclidean projection optimality, objective gap 1/9 | `counterexample_optimal`, `counterexample_unconstrained`, `counterexample_projected`, `counterexample_gap` in [Examples.lean](Rasp/Examples.lean) |
+| Approximate VI | Feasibility is explicit; ε-VI implies objective gap ≤ε and μ times squared distance ≤ε | `ApproxVI`, `approx_vi_gap`, `approx_vi_distance` in [Approximation.lean](Rasp/Approximation.lean) |
+| Computed residual | Norm error τ and feasible diameter R increase VI tolerance by τR | `residual_roundoff_certificate` in Approximation |
+| Plain spectral comparison | γ=0 is Euclidean spectral projection and already shares fixed-input Lipschitz stability | `zero_penalty_eq_projection` in Approximation; `lipschitz_signal` in Core |
+| Approximate projection | Projection error εp and computed feedback εf give μ‖Dhat−Dstar‖≤μεp+(εf+γ‖E‖εp)‖E‖; feasibility is separate | `dualStep_lipschitz`, `approximate_feedback_error` in Approximation |
+| Root termination | Initial bracket ±\|F(0)\|; exact signs contain the root; midpoint error and dyadic widths bound step error | `feedback_initial_bracket`, `feedback_root_interval`, `interval_midpoint_error`, `bisection_step_error`, `bisection_width_step` in Approximation |
+| Feasibility repair | Actual operator bound b>0 allows scaling by min(1,r/b), including r=0 | `radial_feasibility` in Approximation |
 
 The example's Euclidean projection is expressed as `Solves K 1 0 X 0 C`;
 `project_minimizes_distance` and uniqueness connect that predicate to the
@@ -73,10 +80,12 @@ infinite-support laws, adaptive direction selection, or momentum covariance.
 `isotropicStep`, `project` and `matrixStep` use classical choice to specify exact
 minimizers. They are **noncomputable definitions**. This development does not
 claim to extract a numerical optimizer, verify an SVD implementation or certify
-bf16 arithmetic. The solver stopping bound assumes an exact projection.
+bf16 arithmetic. The new approximate certificates require independently justified
+projection/residual error bounds. An uncertified computed SVD norm is not such a bound.
 
 The descent theorem assumes a quadratic upper model for the actual loss at the
 proposed step and an explicit bound on signal error. No global neural-network
 smoothness, stochastic convergence, generalization, speed or memory advantage is
-proved. Peer algorithms are cited context; their formal comparative analysis is
-planned in Phase 01.
+proved. Phase 01 formally compares γ=0 to projection and preserves the actual
+matrix noncommutation example. Source definitions and facet comparisons for peers
+are in `research/r001/peer-updates.md`; no universal superiority theorem is claimed.

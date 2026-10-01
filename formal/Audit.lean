@@ -51,3 +51,15 @@ import Rasp
 #print axioms Rasp.iid_split_second_moment
 #print axioms Rasp.directional_noise_identity
 #print axioms Rasp.matrixStep
+#print axioms Rasp.approx_vi_gap
+#print axioms Rasp.approx_vi_distance
+#print axioms Rasp.residual_roundoff_certificate
+#print axioms Rasp.zero_penalty_eq_projection
+#print axioms Rasp.dualStep_lipschitz
+#print axioms Rasp.approximate_feedback_error
+#print axioms Rasp.feedback_initial_bracket
+#print axioms Rasp.feedback_root_interval
+#print axioms Rasp.radial_feasibility
+#print axioms Rasp.interval_midpoint_error
+#print axioms Rasp.bisection_step_error
+#print axioms Rasp.bisection_width_step

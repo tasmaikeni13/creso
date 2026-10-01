@@ -12,3 +12,5 @@ runs/
 wandb/
 *.log
 .DS_Store
+.source-cache/
+research/**/*.npz

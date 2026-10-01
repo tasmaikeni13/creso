@@ -1,6 +1,6 @@
 # Phase 01 — Frontier and formal analysis
 
-**State: not started.** Inputs: `theory.md`, `formal/`, the preparation research
+**State: passed (r001, 2026-10-01).** Evidence: `research/r001/phase01-handoff.md`. Inputs: `theory.md`, `formal/`, the preparation research
 record, and the literature-frontier, mechanism-transfer and theory-research skills.
 
 ## Work

@@ -1,8 +1,8 @@
 # Research execution guide
 
-These are **nine future phases**. The initial theory, source review and Lean
-verification are preparation artifacts. No phase, pilot or TPU run has started.
-The user will start phases individually or authorize a range.
+These are nine research phases. The initial theory, source review and Lean
+verification are preparation artifacts. The user authorized phases 01 and 02
+on 2026-10-01. No training pilot or TPU run has started.
 
 ## Objective and fixed requirements
 
@@ -25,8 +25,8 @@ remain visible; do not iterate by selecting lucky seeds or weakening baselines.
 
 | Phase | Work | Depends on | State |
 |---|---|---|---|
-| [01](01-mathematics.md) | Frontier, definitions and formal analysis | Preparation | Not started |
-| [02](02-falsification.md) | Mathematical attacks and statistical simulations | 01 | Not started |
+| [01](01-mathematics.md) | Frontier, definitions and formal analysis | Preparation | Passed |
+| [02](02-falsification.md) | Mathematical attacks and statistical simulations | 01 | Running |
 | [03](03-reference-implementations.md) | CPU reference methods and correctness | 01–02 | Not started |
 | [04](04-protocol.md) | Data, 125M model and preregistered protocol | 01–03 | Not started |
 | [05](05-tpu-kernels.md) | TPU implementation and numerical certification | 03–04 | Not started |
