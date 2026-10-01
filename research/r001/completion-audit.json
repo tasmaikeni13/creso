@@ -13,5 +13,7 @@
   "unchanged_formal_pins": true,
   "raw_data_out_of_git": true,
   "complete_raw_replay": true,
-  "later_phases_not_started": true
+  "later_phases_not_started": true,
+  "raw_archive_durable_github_storage": true,
+  "remote_archive_sha256_verified": true
 }

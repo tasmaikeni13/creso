@@ -4,7 +4,17 @@
   "sha256": "d05385d95b931ff4ec373263db91510dc1fd5e75d3917b57e071c9c4475dc8f2",
   "release_tag": "r001-phase01-02",
   "repository": "tasmaikeni13/rasp",
-  "status": "prepared_for_draft_release",
+  "status": "uploaded_verified_draft_release",
   "contents": "All 12 original raw NPZ files plus immutable final summaries and manifest",
-  "raw_files_tracked_in_git": false
+  "raw_files_tracked_in_git": false,
+  "verified_at": "2026-10-01T11:04:42.014200+00:00",
+  "release_id": 400883909,
+  "release_url": "https://github.com/tasmaikeni13/rasp/releases/tag/untagged-0d2cee371caba99ed583",
+  "release_target_commit": "edc0330b6159bbb20e9f4779eddd2a4099794251",
+  "asset_id": 603062780,
+  "asset_api_url": "https://api.github.com/repos/tasmaikeni13/rasp/releases/assets/603062780",
+  "browser_download_url": "https://github.com/tasmaikeni13/rasp/releases/download/untagged-0d2cee371caba99ed583/r001-raw-evidence.tar",
+  "server_digest": "sha256:d05385d95b931ff4ec373263db91510dc1fd5e75d3917b57e071c9c4475dc8f2",
+  "server_digest_matches_local": true,
+  "draft": true
 }

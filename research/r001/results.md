@@ -154,8 +154,8 @@ No full Muon/AdamW/SOAP/Dion or all-peer training parity is asserted.
 All **98,304** final contexts and paired directions/outcomes are saved in 12
 compressed raw files, **449,061,360 bytes**, locally at
 `research/r001/phase02/run-v1/final/*.npz`. Repository instructions exclude data
-from Git. An evidence archive is prepared for draft GitHub release
-`r001-phase01-02`; `raw-storage.json` records its size, SHA256 and storage status.
+from Git. An evidence archive is stored in the [draft GitHub release](https://github.com/tasmaikeni13/rasp/releases/tag/untagged-0d2cee371caba99ed583)
+`r001-phase01-02`; `raw-storage.json` records its size and verified server SHA256.
 The pushed manifest records individual SHA256 hashes; frozen code, seeds,
 dependency versions and commands regenerate them. `raw-audit.json` verifies
 every hash and recomputes paired summaries. Source snapshots similarly remain

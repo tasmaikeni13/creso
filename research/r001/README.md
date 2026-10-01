@@ -47,7 +47,7 @@ should match in the recorded numerical environment.
 An independent complete replay reproduced all 108 development selections, all
 12 raw NPZ hashes and all final statistics exactly; see `reproduction-checks.json`.
 
-The original archive is attached to draft release `r001-phase01-02`; the
+The original archive is attached to [draft release `r001-phase01-02`](https://github.com/tasmaikeni13/rasp/releases/tag/untagged-0d2cee371caba99ed583); the
 owner can download it with authenticated GitHub CLI. Verify its SHA256 against
 `raw-storage.json` before extracting at the repository root:
 

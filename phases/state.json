@@ -51,7 +51,8 @@
         "momentum_covariance_separate": true,
         "coverage_diagnostic": true,
         "raw_hashes_and_full_replay": true,
-        "cost_and_communication_recorded": true
+        "cost_and_communication_recorded": true,
+        "raw_durable_external_storage_verified": true
       },
       "limitations": [
         "No new-primitive novelty established",
